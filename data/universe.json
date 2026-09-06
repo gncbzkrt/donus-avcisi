@@ -1,2422 +1,3026 @@
 [
   {
+    "symbol": "A1CAP",
+    "name": "A1CAP ACP"
+  },
+  {
     "symbol": "A1YEN",
-    "name": ""
+    "name": "A1YEN"
+  },
+  {
+    "symbol": "AAGYO",
+    "name": "AAGYO"
   },
   {
     "symbol": "ACSEL",
-    "name": ""
+    "name": "ACSEL"
+  },
+  {
+    "symbol": "ADB",
+    "name": "ADB ADBNK"
   },
   {
     "symbol": "ADEL",
-    "name": ""
+    "name": "ADEL"
   },
   {
     "symbol": "ADESE",
-    "name": ""
+    "name": "ADESE"
   },
   {
     "symbol": "ADGYO",
-    "name": ""
+    "name": "ADGYO"
+  },
+  {
+    "symbol": "ADLVY",
+    "name": "ADLVY"
   },
   {
     "symbol": "AEFES",
-    "name": ""
+    "name": "AEFES"
+  },
+  {
+    "symbol": "AFB",
+    "name": "AFB AKTIF"
   },
   {
     "symbol": "AFYON",
-    "name": ""
+    "name": "AFYON"
   },
   {
     "symbol": "AGESA",
-    "name": ""
+    "name": "AGESA"
   },
   {
     "symbol": "AGHOL",
-    "name": ""
+    "name": "AGHOL"
   },
   {
     "symbol": "AGROT",
-    "name": ""
+    "name": "AGROT"
   },
   {
     "symbol": "AGYO",
-    "name": ""
+    "name": "AGYO"
   },
   {
     "symbol": "AHGAZ",
-    "name": "Ahlatcı Doğal Gaz"
+    "name": "AHGAZ"
   },
   {
     "symbol": "AHSGY",
-    "name": ""
+    "name": "AHSGY"
   },
   {
     "symbol": "AKBNK",
-    "name": "Akbank"
+    "name": "AKBNK"
   },
   {
     "symbol": "AKCNS",
-    "name": ""
+    "name": "AKCNS"
+  },
+  {
+    "symbol": "AKCVR",
+    "name": "AKCVR"
+  },
+  {
+    "symbol": "AKDFA",
+    "name": "AKDFA"
   },
   {
     "symbol": "AKENR",
-    "name": ""
+    "name": "AKENR"
   },
   {
     "symbol": "AKFGY",
-    "name": ""
+    "name": "AKFGY"
   },
   {
     "symbol": "AKFIS",
-    "name": ""
+    "name": "AKFIS"
+  },
+  {
+    "symbol": "AKFK",
+    "name": "AKFK"
   },
   {
     "symbol": "AKFYE",
-    "name": ""
+    "name": "AKFYE"
   },
   {
     "symbol": "AKGRT",
-    "name": ""
+    "name": "AKGRT"
   },
   {
     "symbol": "AKHAN",
-    "name": ""
+    "name": "AKHAN"
+  },
+  {
+    "symbol": "AKM",
+    "name": "AKM AKMEN"
   },
   {
     "symbol": "AKMGY",
-    "name": ""
+    "name": "AKMGY"
   },
   {
     "symbol": "AKSA",
-    "name": "Aksa Akrilik"
+    "name": "AKSA"
   },
   {
     "symbol": "AKSEN",
-    "name": "Aksa Enerji"
+    "name": "AKSEN"
+  },
+  {
+    "symbol": "AKSFA",
+    "name": "AKSFA"
   },
   {
     "symbol": "AKSGY",
-    "name": ""
+    "name": "AKSGY"
   },
   {
     "symbol": "AKSUE",
-    "name": ""
+    "name": "AKSUE"
+  },
+  {
+    "symbol": "AKTVK",
+    "name": "AKTVK"
   },
   {
     "symbol": "AKYHO",
-    "name": ""
+    "name": "AKYHO"
   },
   {
     "symbol": "ALARK",
-    "name": "Alarko Holding"
+    "name": "ALARK"
   },
   {
     "symbol": "ALBRK",
-    "name": "Albaraka Türk"
+    "name": "ALBRK ALK"
+  },
+  {
+    "symbol": "ALBTN",
+    "name": "ALBTN"
   },
   {
     "symbol": "ALCAR",
-    "name": ""
+    "name": "ALCAR"
   },
   {
     "symbol": "ALCTL",
-    "name": "Alcatel Lucent Teletaş"
+    "name": "ALCTL"
   },
   {
     "symbol": "ALFAS",
-    "name": "Alfa Solar"
+    "name": "ALFAS"
   },
   {
     "symbol": "ALGYO",
-    "name": "Alarko GYO"
+    "name": "ALGYO"
+  },
+  {
+    "symbol": "ALJF",
+    "name": "ALJF"
   },
   {
     "symbol": "ALKA",
-    "name": ""
+    "name": "ALKA"
   },
   {
     "symbol": "ALKIM",
-    "name": ""
+    "name": "ALKIM"
   },
   {
     "symbol": "ALKLC",
-    "name": ""
+    "name": "ALKLC"
+  },
+  {
+    "symbol": "ALNUS",
+    "name": "ALNUS ANC"
   },
   {
     "symbol": "ALTNY",
-    "name": ""
+    "name": "ALTNY"
   },
   {
     "symbol": "ALVES",
-    "name": ""
+    "name": "ALVES"
   },
   {
     "symbol": "ANELE",
-    "name": "Anel Elektrik"
+    "name": "ANELE"
   },
   {
     "symbol": "ANGEN",
-    "name": "Anatolia Geneworks"
+    "name": "ANGEN"
   },
   {
     "symbol": "ANHYT",
-    "name": "Anadolu Hayat"
+    "name": "ANHYT"
   },
   {
     "symbol": "ANSGR",
-    "name": "Anadolu Sigorta"
+    "name": "ANSGR"
   },
   {
     "symbol": "ARASE",
-    "name": "Doğu Aras Enerji"
+    "name": "ARASE"
   },
   {
     "symbol": "ARCLK",
-    "name": "Arçelik"
+    "name": "ARCLK"
   },
   {
     "symbol": "ARDYZ",
-    "name": "ARD Grup Bilişim"
+    "name": "ARDYZ"
   },
   {
     "symbol": "ARENA",
-    "name": "Arena Bilgisayar"
+    "name": "ARENA"
   },
   {
     "symbol": "ARFYE",
-    "name": ""
+    "name": "ARFYE"
   },
   {
     "symbol": "ARMGD",
-    "name": ""
+    "name": "ARMGD"
   },
   {
     "symbol": "ARSAN",
-    "name": ""
+    "name": "ARSAN"
+  },
+  {
+    "symbol": "ARSNF",
+    "name": "ARSNF"
+  },
+  {
+    "symbol": "ARSVY",
+    "name": "ARSVY"
   },
   {
     "symbol": "ARTMS",
-    "name": ""
+    "name": "ARTMS"
   },
   {
     "symbol": "ARZUM",
-    "name": ""
+    "name": "ARZUM"
   },
   {
     "symbol": "ASELS",
-    "name": "Aselsan"
+    "name": "ASELS"
   },
   {
     "symbol": "ASGYO",
-    "name": ""
+    "name": "ASGYO"
   },
   {
     "symbol": "ASTOR",
-    "name": "Astor Enerji"
+    "name": "ASTOR"
   },
   {
     "symbol": "ASUZU",
-    "name": "Anadolu Isuzu"
+    "name": "ASUZU"
+  },
+  {
+    "symbol": "ATA",
+    "name": "ATA ATAYM"
   },
   {
     "symbol": "ATAGY",
-    "name": ""
+    "name": "ATAGY"
   },
   {
     "symbol": "ATAKP",
-    "name": ""
+    "name": "ATAKP"
   },
   {
     "symbol": "ATATP",
-    "name": "ATP Yazılım"
+    "name": "ATATP"
+  },
+  {
+    "symbol": "ATATR",
+    "name": "ATATR"
+  },
+  {
+    "symbol": "ATAVK",
+    "name": "ATAVK"
   },
   {
     "symbol": "ATEKS",
-    "name": ""
+    "name": "ATEKS"
   },
   {
     "symbol": "ATLAS",
-    "name": ""
+    "name": "ATLAS"
+  },
+  {
+    "symbol": "ATLFA",
+    "name": "ATLFA"
   },
   {
     "symbol": "ATSYH",
-    "name": ""
+    "name": "ATSYH"
   },
   {
     "symbol": "AVGYO",
-    "name": ""
+    "name": "AVGYO"
   },
   {
     "symbol": "AVHOL",
-    "name": ""
+    "name": "AVHOL"
   },
   {
     "symbol": "AVOD",
-    "name": "A.V.O.D."
+    "name": "AVOD"
   },
   {
     "symbol": "AVPGY",
-    "name": ""
+    "name": "AVPGY"
   },
   {
     "symbol": "AVTUR",
-    "name": ""
+    "name": "AVTUR"
   },
   {
     "symbol": "AYCES",
-    "name": ""
+    "name": "AYCES"
   },
   {
     "symbol": "AYDEM",
-    "name": "Aydem Yenilenebilir"
+    "name": "AYDEM"
   },
   {
     "symbol": "AYEN",
-    "name": ""
+    "name": "AYEN"
   },
   {
     "symbol": "AYES",
-    "name": ""
+    "name": "AYES"
   },
   {
     "symbol": "AYGAZ",
-    "name": ""
+    "name": "AYGAZ"
+  },
+  {
+    "symbol": "AYTEM",
+    "name": "AYTEM YYA"
   },
   {
     "symbol": "AZTEK",
-    "name": ""
+    "name": "AZTEK"
   },
   {
     "symbol": "BAGFS",
-    "name": "Bagfaş"
+    "name": "BAGFS"
   },
   {
     "symbol": "BAHKM",
-    "name": ""
+    "name": "BAHKM"
   },
   {
     "symbol": "BAKAB",
-    "name": ""
+    "name": "BAKAB"
   },
   {
     "symbol": "BALAT",
-    "name": ""
+    "name": "BALAT"
   },
   {
     "symbol": "BALSU",
-    "name": ""
+    "name": "BALSU"
   },
   {
     "symbol": "BANVT",
-    "name": "Banvit"
+    "name": "BANVT"
   },
   {
     "symbol": "BARMA",
-    "name": "Barembal"
+    "name": "BARMA"
   },
   {
     "symbol": "BASCM",
-    "name": ""
+    "name": "BASCM"
   },
   {
     "symbol": "BASGZ",
-    "name": "Başkent Doğalgaz"
+    "name": "BASGZ"
   },
   {
     "symbol": "BAYRK",
-    "name": ""
+    "name": "BAYRK"
   },
   {
     "symbol": "BEGYO",
-    "name": ""
+    "name": "BEGYO"
   },
   {
     "symbol": "BERA",
-    "name": "Bera Holding"
+    "name": "BERA"
   },
   {
     "symbol": "BESLR",
-    "name": ""
+    "name": "BESLR"
+  },
+  {
+    "symbol": "BESTE",
+    "name": "BESTE"
+  },
+  {
+    "symbol": "BETAE",
+    "name": "BETAE"
   },
   {
     "symbol": "BEYAZ",
-    "name": ""
+    "name": "BEYAZ"
   },
   {
     "symbol": "BFREN",
-    "name": "Bosch Fren"
+    "name": "BFREN"
   },
   {
     "symbol": "BIENY",
-    "name": "Bien Yapı"
+    "name": "BIENY"
   },
   {
     "symbol": "BIGCH",
-    "name": ""
+    "name": "BIGCH"
   },
   {
     "symbol": "BIGEN",
-    "name": ""
+    "name": "BIGEN"
   },
   {
     "symbol": "BIGTK",
-    "name": ""
+    "name": "BIGTK"
   },
   {
     "symbol": "BIMAS",
-    "name": "BİM"
+    "name": "BIMAS"
   },
   {
     "symbol": "BINBN",
-    "name": ""
+    "name": "BINBN"
   },
   {
     "symbol": "BINHO",
-    "name": ""
+    "name": "BINHO"
   },
   {
     "symbol": "BIOEN",
-    "name": "Biotrend"
+    "name": "BIOEN"
   },
   {
     "symbol": "BIZIM",
-    "name": "Bizim Toptan"
+    "name": "BIZIM"
   },
   {
     "symbol": "BJKAS",
-    "name": ""
+    "name": "BJKAS"
+  },
+  {
+    "symbol": "BKRGY",
+    "name": "BKRGY"
   },
   {
     "symbol": "BLCYT",
-    "name": "Bilici Yatırım"
+    "name": "BLCYT"
+  },
+  {
+    "symbol": "BLKOM",
+    "name": "BLKOM"
+  },
+  {
+    "symbol": "BLS",
+    "name": "BLS BLSMD"
   },
   {
     "symbol": "BLUME",
-    "name": ""
+    "name": "BLUME"
   },
   {
     "symbol": "BMSCH",
-    "name": ""
+    "name": "BMSCH"
   },
   {
     "symbol": "BMSTL",
-    "name": "BMS Birleşik Metal"
+    "name": "BMSTL"
+  },
+  {
+    "symbol": "BNPPI",
+    "name": "BNPPI"
   },
   {
     "symbol": "BNTAS",
-    "name": "Bantaş"
+    "name": "BNTAS"
   },
   {
     "symbol": "BOBET",
-    "name": "Boğaziçi Beton"
+    "name": "BOBET"
   },
   {
     "symbol": "BORLS",
-    "name": ""
+    "name": "BORLS"
   },
   {
     "symbol": "BORSK",
-    "name": ""
+    "name": "BORSK"
   },
   {
     "symbol": "BOSSA",
-    "name": ""
+    "name": "BOSSA"
+  },
+  {
+    "symbol": "BRGAN",
+    "name": "BRGAN BUR"
+  },
+  {
+    "symbol": "BRGFK",
+    "name": "BRGFK"
   },
   {
     "symbol": "BRISA",
-    "name": "Brisa"
+    "name": "BRISA"
   },
   {
     "symbol": "BRKO",
-    "name": ""
+    "name": "BRKO"
   },
   {
     "symbol": "BRKSN",
-    "name": ""
+    "name": "BRKSN"
+  },
+  {
+    "symbol": "BRKT",
+    "name": "BRKT"
   },
   {
     "symbol": "BRKVY",
-    "name": ""
+    "name": "BRKVY"
   },
   {
     "symbol": "BRLSM",
-    "name": ""
+    "name": "BRLSM"
   },
   {
     "symbol": "BRMEN",
-    "name": ""
+    "name": "BRMEN"
   },
   {
     "symbol": "BRSAN",
-    "name": "Borusan Mannesmann"
+    "name": "BRSAN"
   },
   {
     "symbol": "BRYAT",
-    "name": "Borusan Yatırım"
+    "name": "BRYAT"
   },
   {
     "symbol": "BSOKE",
-    "name": "Batısöke Çimento"
+    "name": "BSOKE"
   },
   {
     "symbol": "BTCIM",
-    "name": "Batıçim"
+    "name": "BTCIM"
   },
   {
     "symbol": "BUCIM",
-    "name": "Bursa Çimento"
+    "name": "BUCIM"
   },
   {
     "symbol": "BULGS",
-    "name": ""
+    "name": "BULGS"
   },
   {
     "symbol": "BURCE",
-    "name": "Burçelik"
+    "name": "BURCE"
   },
   {
     "symbol": "BURVA",
-    "name": "Burçelik Vana"
+    "name": "BURVA"
   },
   {
     "symbol": "BVSAN",
-    "name": "Bülbüloğlu Vinç"
+    "name": "BVSAN"
   },
   {
     "symbol": "BYDNR",
-    "name": "Baydöner"
+    "name": "BYDNR"
+  },
+  {
+    "symbol": "CAGFA",
+    "name": "CAGFA"
   },
   {
     "symbol": "CANTE",
-    "name": "Çan2 Termik"
+    "name": "CANTE"
   },
   {
     "symbol": "CASA",
-    "name": ""
+    "name": "CASA"
   },
   {
     "symbol": "CATES",
-    "name": ""
+    "name": "CATES"
   },
   {
     "symbol": "CCOLA",
-    "name": "Coca-Cola İçecek"
+    "name": "CCOLA"
   },
   {
     "symbol": "CELHA",
-    "name": ""
+    "name": "CELHA"
   },
   {
     "symbol": "CEMAS",
-    "name": "Çemaş"
+    "name": "CEMAS"
   },
   {
     "symbol": "CEMTS",
-    "name": "Çemtaş"
+    "name": "CEMTS"
   },
   {
     "symbol": "CEMZY",
-    "name": ""
+    "name": "CEMZY"
   },
   {
     "symbol": "CEOEM",
-    "name": ""
+    "name": "CEOEM"
   },
   {
     "symbol": "CGCAM",
-    "name": ""
+    "name": "CGCAM"
   },
   {
     "symbol": "CIMSA",
-    "name": "Çimsa"
+    "name": "CIMSA"
+  },
+  {
+    "symbol": "CITAS",
+    "name": "CITAS"
   },
   {
     "symbol": "CLEBI",
-    "name": "Çelebi"
+    "name": "CLEBI"
+  },
+  {
+    "symbol": "CLKMT",
+    "name": "CLKMT"
   },
   {
     "symbol": "CMBTN",
-    "name": "Çimbeton"
+    "name": "CMBTN"
   },
   {
     "symbol": "CMENT",
-    "name": "Çimentaş"
+    "name": "CMENT"
+  },
+  {
+    "symbol": "CMSAN",
+    "name": "CMSAN"
   },
   {
     "symbol": "CONSE",
-    "name": "Consus Enerji"
+    "name": "CONSE"
   },
   {
     "symbol": "COSMO",
-    "name": ""
+    "name": "COSMO"
   },
   {
     "symbol": "CRDFA",
-    "name": ""
+    "name": "CRDFA"
   },
   {
     "symbol": "CRFSA",
-    "name": ""
+    "name": "CRFSA"
   },
   {
     "symbol": "CUSAN",
-    "name": ""
+    "name": "CUSAN"
   },
   {
     "symbol": "CVKMD",
-    "name": "CVK Maden"
+    "name": "CVKMD"
   },
   {
     "symbol": "CWENE",
-    "name": "CW Enerji"
+    "name": "CWENE"
   },
   {
     "symbol": "DAGI",
-    "name": "Dagi Giyim"
+    "name": "DAGI"
   },
   {
     "symbol": "DAPGM",
-    "name": "DAP Gayrimenkul"
+    "name": "DAPGM"
   },
   {
     "symbol": "DARDL",
-    "name": "Dardanel"
+    "name": "DARDL"
   },
   {
     "symbol": "DCTTR",
-    "name": ""
+    "name": "DCTTR"
+  },
+  {
+    "symbol": "DENFA",
+    "name": "DENFA"
   },
   {
     "symbol": "DENGE",
-    "name": ""
+    "name": "DENGE"
+  },
+  {
+    "symbol": "DENVA",
+    "name": "DENVA"
   },
   {
     "symbol": "DERHL",
-    "name": ""
+    "name": "DERHL"
   },
   {
     "symbol": "DERIM",
-    "name": ""
+    "name": "DERIM"
   },
   {
     "symbol": "DESA",
-    "name": ""
+    "name": "DESA"
   },
   {
     "symbol": "DESPC",
-    "name": ""
+    "name": "DESPC"
   },
   {
     "symbol": "DEVA",
-    "name": ""
+    "name": "DEVA"
+  },
+  {
+    "symbol": "DFKTR",
+    "name": "DFKTR"
   },
   {
     "symbol": "DGATE",
-    "name": ""
+    "name": "DGATE"
   },
   {
     "symbol": "DGGYO",
-    "name": ""
+    "name": "DGGYO"
   },
   {
     "symbol": "DGNMO",
-    "name": "Doğanlar Mobilya"
+    "name": "DGNMO"
+  },
+  {
+    "symbol": "DGRVK",
+    "name": "DGRVK"
+  },
+  {
+    "symbol": "DIMES",
+    "name": "DIMES"
   },
   {
     "symbol": "DIRIT",
-    "name": ""
+    "name": "DIRIT"
   },
   {
     "symbol": "DITAS",
-    "name": "Ditaş"
+    "name": "DITAS"
+  },
+  {
+    "symbol": "DKVRL",
+    "name": "DKVRL"
+  },
+  {
+    "symbol": "DKYVK",
+    "name": "DKYVK"
+  },
+  {
+    "symbol": "DMD",
+    "name": "DMD DSYAT"
+  },
+  {
+    "symbol": "DMLKT",
+    "name": "DMLKT"
   },
   {
     "symbol": "DMRGD",
-    "name": "DMR Unlu Mamuller"
+    "name": "DMRGD"
   },
   {
     "symbol": "DMSAS",
-    "name": "Demisaş"
+    "name": "DMSAS"
+  },
+  {
+    "symbol": "DNFIN",
+    "name": "DNFIN"
   },
   {
     "symbol": "DNISI",
-    "name": "Dinamik Isı"
+    "name": "DNISI"
+  },
+  {
+    "symbol": "DNYVA",
+    "name": "DNYVA"
+  },
+  {
+    "symbol": "DNZEN",
+    "name": "DNZEN"
   },
   {
     "symbol": "DOAS",
-    "name": "Doğuş Otomotiv"
+    "name": "DOAS"
   },
   {
     "symbol": "DOCO",
-    "name": ""
+    "name": "DOCO"
   },
   {
     "symbol": "DOFER",
-    "name": ""
+    "name": "DOFER"
   },
   {
     "symbol": "DOFRB",
-    "name": ""
+    "name": "DOFRB"
   },
   {
     "symbol": "DOGUB",
-    "name": "Doğusan Boru"
+    "name": "DOGUB"
+  },
+  {
+    "symbol": "DOGVY",
+    "name": "DOGVY"
   },
   {
     "symbol": "DOHOL",
-    "name": "Doğan Holding"
+    "name": "DOHOL"
   },
   {
     "symbol": "DOKTA",
-    "name": "Döktaş"
+    "name": "DOKTA"
+  },
+  {
+    "symbol": "DRPHN",
+    "name": "DRPHN"
   },
   {
     "symbol": "DSTKF",
-    "name": ""
+    "name": "DSTKF"
   },
   {
     "symbol": "DUNYH",
-    "name": ""
+    "name": "DUNYH"
   },
   {
     "symbol": "DURDO",
-    "name": "Duran Doğan"
+    "name": "DURDO"
   },
   {
     "symbol": "DURKN",
-    "name": ""
+    "name": "DURKN"
+  },
+  {
+    "symbol": "DVRLK",
+    "name": "DVRLK"
+  },
+  {
+    "symbol": "DYBNK",
+    "name": "DYBNK"
   },
   {
     "symbol": "DYOBY",
-    "name": "Dyo Boya"
+    "name": "DYOBY"
   },
   {
     "symbol": "DZGYO",
-    "name": "Deniz GYO"
+    "name": "DZGYO"
   },
   {
     "symbol": "EBEBK",
-    "name": "Ebebek"
+    "name": "EBEBK"
   },
   {
     "symbol": "ECILC",
-    "name": "EİS Eczacıbaşı İlaç"
+    "name": "ECILC"
   },
   {
     "symbol": "ECOGR",
-    "name": ""
+    "name": "ECOGR"
+  },
+  {
+    "symbol": "ECZIP",
+    "name": "ECZIP"
   },
   {
     "symbol": "ECZYT",
-    "name": "Eczacıbaşı Yatırım"
+    "name": "ECZYT"
   },
   {
     "symbol": "EDATA",
-    "name": "E-Data Teknoloji"
+    "name": "EDATA"
   },
   {
     "symbol": "EDIP",
-    "name": "Edip GYO"
+    "name": "EDIP"
   },
   {
     "symbol": "EFOR",
-    "name": ""
+    "name": "EFOR"
   },
   {
     "symbol": "EGEEN",
-    "name": "Ege Endüstri"
+    "name": "EGEEN"
   },
   {
     "symbol": "EGEGY",
-    "name": ""
+    "name": "EGEGY"
   },
   {
     "symbol": "EGEPO",
-    "name": "Egepol"
+    "name": "EGEPO"
   },
   {
     "symbol": "EGGUB",
-    "name": "Ege Gübre"
+    "name": "EGGUB"
   },
   {
     "symbol": "EGPRO",
-    "name": "Ege Profil"
+    "name": "EGPRO"
   },
   {
     "symbol": "EGSER",
-    "name": "Ege Seramik"
+    "name": "EGSER"
+  },
+  {
+    "symbol": "EKDMR",
+    "name": "EKDMR"
+  },
+  {
+    "symbol": "EKER",
+    "name": "EKER"
   },
   {
     "symbol": "EKGYO",
-    "name": "Emlak Konut GYO"
+    "name": "EKGYO"
+  },
+  {
+    "symbol": "EKIM",
+    "name": "EKIM"
   },
   {
     "symbol": "EKIZ",
-    "name": ""
+    "name": "EKIZ"
+  },
+  {
+    "symbol": "EKOFA",
+    "name": "EKOFA"
   },
   {
     "symbol": "EKOS",
-    "name": ""
+    "name": "EKOS"
   },
   {
     "symbol": "EKSUN",
-    "name": "Eksun Gıda"
+    "name": "EKSUN"
+  },
+  {
+    "symbol": "EKTVK",
+    "name": "EKTVK"
   },
   {
     "symbol": "ELITE",
-    "name": "Elite Naturel"
+    "name": "ELITE"
+  },
+  {
+    "symbol": "EMIRV",
+    "name": "EMIRV"
   },
   {
     "symbol": "EMKEL",
-    "name": "Emek Elektrik"
+    "name": "EMKEL"
   },
   {
     "symbol": "EMNIS",
-    "name": ""
+    "name": "EMNIS"
+  },
+  {
+    "symbol": "EMPAE",
+    "name": "EMPAE"
+  },
+  {
+    "symbol": "EMVAR",
+    "name": "EMVAR"
   },
   {
     "symbol": "ENDAE",
-    "name": ""
+    "name": "ENDAE"
   },
   {
     "symbol": "ENERY",
-    "name": ""
+    "name": "ENERY"
   },
   {
     "symbol": "ENJSA",
-    "name": "Enerjisa"
+    "name": "ENJSA"
   },
   {
     "symbol": "ENKAI",
-    "name": "Enka İnşaat"
+    "name": "ENKAI"
+  },
+  {
+    "symbol": "ENPRA",
+    "name": "ENPRA"
   },
   {
     "symbol": "ENSRI",
-    "name": ""
+    "name": "ENSRI"
   },
   {
     "symbol": "ENTRA",
-    "name": ""
+    "name": "ENTRA"
   },
   {
     "symbol": "EPLAS",
-    "name": ""
+    "name": "EPLAS"
   },
   {
     "symbol": "ERBOS",
-    "name": ""
+    "name": "ERBOS"
   },
   {
     "symbol": "ERCB",
-    "name": ""
+    "name": "ERCB"
   },
   {
     "symbol": "EREGL",
-    "name": "Ereğli Demir Çelik"
+    "name": "EREGL"
+  },
+  {
+    "symbol": "ERGLI",
+    "name": "ERGLI"
   },
   {
     "symbol": "ERSU",
-    "name": ""
+    "name": "ERSU"
   },
   {
     "symbol": "ESCAR",
-    "name": ""
+    "name": "ESCAR"
   },
   {
     "symbol": "ESCOM",
-    "name": ""
+    "name": "ESCOM"
   },
   {
     "symbol": "ESEN",
-    "name": "Esentepe Elektrik"
+    "name": "ESEN"
   },
   {
     "symbol": "ETILR",
-    "name": ""
+    "name": "ETILR"
   },
   {
     "symbol": "ETYAT",
-    "name": ""
+    "name": "ETYAT"
   },
   {
     "symbol": "EUHOL",
-    "name": ""
+    "name": "EUHOL"
   },
   {
     "symbol": "EUKYO",
-    "name": ""
+    "name": "EUKYO"
   },
   {
     "symbol": "EUPWR",
-    "name": "Europower"
+    "name": "EUPWR"
   },
   {
     "symbol": "EUREN",
-    "name": ""
+    "name": "EUREN"
   },
   {
     "symbol": "EUYO",
-    "name": ""
+    "name": "EUYO"
+  },
+  {
+    "symbol": "EXIMB",
+    "name": "EXIMB THR"
   },
   {
     "symbol": "EYGYO",
-    "name": ""
+    "name": "EYGYO"
   },
   {
     "symbol": "FADE",
-    "name": "Fade Gıda"
+    "name": "FADE"
+  },
+  {
+    "symbol": "FAIRF",
+    "name": "FAIRF"
+  },
+  {
+    "symbol": "FBB",
+    "name": "FBB FBBNK"
   },
   {
     "symbol": "FENER",
-    "name": "Fenerbahçe"
+    "name": "FENER"
+  },
+  {
+    "symbol": "FIGOF",
+    "name": "FIGOF"
+  },
+  {
+    "symbol": "FIN",
+    "name": "FIN QNBTR"
+  },
+  {
+    "symbol": "FKPET",
+    "name": "FKPET"
   },
   {
     "symbol": "FLAP",
-    "name": ""
+    "name": "FLAP"
   },
   {
     "symbol": "FMIZP",
-    "name": ""
+    "name": "FMIZP"
   },
   {
     "symbol": "FONET",
-    "name": ""
+    "name": "FONET"
   },
   {
     "symbol": "FORMT",
-    "name": ""
+    "name": "FORMT"
   },
   {
     "symbol": "FORTE",
-    "name": "Forte Bilgi"
+    "name": "FORTE"
   },
   {
     "symbol": "FRIGO",
-    "name": ""
+    "name": "FRIGO"
   },
   {
     "symbol": "FRMPL",
-    "name": ""
+    "name": "FRMPL"
   },
   {
     "symbol": "FROTO",
-    "name": "Ford Otosan"
+    "name": "FROTO"
   },
   {
     "symbol": "FZLGY",
-    "name": ""
+    "name": "FZLGY"
   },
   {
     "symbol": "GARAN",
-    "name": "Garanti BBVA"
+    "name": "GARAN TGB"
   },
   {
     "symbol": "GARFA",
-    "name": ""
+    "name": "GARFA"
+  },
+  {
+    "symbol": "GARFL",
+    "name": "GARFL"
   },
   {
     "symbol": "GATEG",
-    "name": ""
+    "name": "GATEG"
   },
   {
     "symbol": "GEDIK",
-    "name": ""
+    "name": "GEDIK"
   },
   {
     "symbol": "GEDZA",
-    "name": ""
+    "name": "GEDZA"
   },
   {
     "symbol": "GENIL",
-    "name": "Gen İlaç"
+    "name": "GENIL"
+  },
+  {
+    "symbol": "GENKM",
+    "name": "GENKM"
   },
   {
     "symbol": "GENTS",
-    "name": ""
+    "name": "GENTS"
   },
   {
     "symbol": "GEREL",
-    "name": ""
+    "name": "GEREL"
   },
   {
     "symbol": "GESAN",
-    "name": "Girişim Elektrik"
+    "name": "GESAN"
+  },
+  {
+    "symbol": "GGBVK",
+    "name": "GGBVK"
   },
   {
     "symbol": "GIPTA",
-    "name": ""
+    "name": "GIPTA"
   },
   {
-    "symbol": "GLBMD",
-    "name": ""
+    "symbol": "GLB",
+    "name": "GLB GLBMD"
+  },
+  {
+    "symbol": "GLCVY",
+    "name": "GLCVY"
   },
   {
     "symbol": "GLRMK",
-    "name": "Gülermak"
+    "name": "GLRMK"
   },
   {
     "symbol": "GLRYH",
-    "name": ""
+    "name": "GLRYH"
   },
   {
     "symbol": "GLYHO",
-    "name": ""
+    "name": "GLYHO"
   },
   {
     "symbol": "GMTAS",
-    "name": ""
+    "name": "GMTAS"
   },
   {
     "symbol": "GOKNR",
-    "name": ""
+    "name": "GOKNR"
+  },
+  {
+    "symbol": "GOLDA",
+    "name": "GOLDA"
   },
   {
     "symbol": "GOLTS",
-    "name": "Göltaş"
+    "name": "GOLTS"
   },
   {
     "symbol": "GOODY",
-    "name": "Goodyear"
+    "name": "GOODY"
   },
   {
     "symbol": "GOZDE",
-    "name": ""
+    "name": "GOZDE"
+  },
+  {
+    "symbol": "GRM",
+    "name": "GRM GRYAT"
   },
   {
     "symbol": "GRNYO",
-    "name": ""
+    "name": "GRNYO"
   },
   {
     "symbol": "GRSEL",
-    "name": "Gür-Sel"
+    "name": "GRSEL"
   },
   {
     "symbol": "GRTHO",
-    "name": ""
+    "name": "GRTHO"
   },
   {
     "symbol": "GSDDE",
-    "name": ""
+    "name": "GSDDE"
   },
   {
     "symbol": "GSDHO",
-    "name": ""
+    "name": "GSDHO"
+  },
+  {
+    "symbol": "GSIPD",
+    "name": "GSIPD"
   },
   {
     "symbol": "GSRAY",
-    "name": ""
+    "name": "GSRAY"
   },
   {
     "symbol": "GUBRF",
-    "name": "Gübretaş"
+    "name": "GUBRF"
   },
   {
     "symbol": "GUNDG",
-    "name": ""
+    "name": "GUNDG"
   },
   {
     "symbol": "GWIND",
-    "name": "Galata Wind"
+    "name": "GWIND"
+  },
+  {
+    "symbol": "GYVAR",
+    "name": "GYVAR"
   },
   {
     "symbol": "GZNMI",
-    "name": ""
+    "name": "GZNMI"
   },
   {
     "symbol": "HALKB",
-    "name": "Halkbank"
+    "name": "HALKB THL"
   },
   {
-    "symbol": "HALKS",
-    "name": ""
+    "symbol": "HALKF",
+    "name": "HALKF"
+  },
+  {
+    "symbol": "HALKI",
+    "name": "HALKI HLY"
   },
   {
     "symbol": "HATEK",
-    "name": ""
+    "name": "HATEK"
   },
   {
     "symbol": "HATSN",
-    "name": ""
+    "name": "HATSN"
+  },
+  {
+    "symbol": "HAYVK",
+    "name": "HAYVK"
+  },
+  {
+    "symbol": "HDFFL",
+    "name": "HDFFL"
   },
   {
     "symbol": "HDFGS",
-    "name": "Hedef Girişim"
+    "name": "HDFGS"
+  },
+  {
+    "symbol": "HDFVK",
+    "name": "HDFVK"
+  },
+  {
+    "symbol": "HDFYB",
+    "name": "HDFYB HYB"
   },
   {
     "symbol": "HEDEF",
-    "name": ""
+    "name": "HEDEF"
   },
   {
     "symbol": "HEKTS",
-    "name": "Hektaş"
+    "name": "HEKTS"
   },
   {
     "symbol": "HKTM",
-    "name": ""
+    "name": "HKTM"
   },
   {
     "symbol": "HLGYO",
-    "name": "Halk GYO"
+    "name": "HLGYO"
+  },
+  {
+    "symbol": "HLVKS",
+    "name": "HLVKS"
   },
   {
     "symbol": "HOROZ",
-    "name": ""
+    "name": "HOROZ"
   },
   {
     "symbol": "HRKET",
-    "name": ""
+    "name": "HRKET"
   },
   {
     "symbol": "HTTBT",
-    "name": ""
+    "name": "HTTBT"
   },
   {
     "symbol": "HUBVC",
-    "name": ""
+    "name": "HUBVC"
   },
   {
     "symbol": "HUNER",
-    "name": ""
+    "name": "HUNER"
   },
   {
     "symbol": "HURGZ",
-    "name": ""
+    "name": "HURGZ"
   },
   {
-    "symbol": "ICBCT",
-    "name": ""
+    "symbol": "HUZFA",
+    "name": "HUZFA"
+  },
+  {
+    "symbol": "IAZ",
+    "name": "IAZ INVAZ"
+  },
+  {
+    "symbol": "ICB",
+    "name": "ICB ICBCT"
   },
   {
     "symbol": "ICUGS",
-    "name": ""
+    "name": "ICUGS"
   },
   {
     "symbol": "IDGYO",
-    "name": ""
+    "name": "IDGYO"
   },
   {
     "symbol": "IEYHO",
-    "name": ""
+    "name": "IEYHO"
   },
   {
     "symbol": "IHAAS",
-    "name": ""
+    "name": "IHAAS"
   },
   {
     "symbol": "IHEVA",
-    "name": ""
+    "name": "IHEVA"
   },
   {
     "symbol": "IHGZT",
-    "name": ""
+    "name": "IHGZT"
   },
   {
     "symbol": "IHLAS",
-    "name": "İhlas Holding"
+    "name": "IHLAS"
   },
   {
     "symbol": "IHLGM",
-    "name": "İhlas Gayrimenkul"
+    "name": "IHLGM"
   },
   {
     "symbol": "IHYAY",
-    "name": ""
+    "name": "IHYAY"
   },
   {
     "symbol": "IMASM",
-    "name": ""
+    "name": "IMASM"
+  },
+  {
+    "symbol": "INALR",
+    "name": "INALR"
   },
   {
     "symbol": "INDES",
-    "name": "İndeks Bilgisayar"
+    "name": "INDES"
   },
   {
     "symbol": "INFO",
-    "name": ""
+    "name": "INFO IYF"
   },
   {
     "symbol": "INGRM",
-    "name": ""
+    "name": "INGRM"
   },
   {
     "symbol": "INTEK",
-    "name": ""
+    "name": "INTEK"
   },
   {
     "symbol": "INTEM",
-    "name": ""
+    "name": "INTEM"
+  },
+  {
+    "symbol": "INTET",
+    "name": "INTET"
   },
   {
     "symbol": "INVEO",
-    "name": "Inveo Yatırım"
+    "name": "INVEO"
   },
   {
     "symbol": "INVES",
-    "name": ""
+    "name": "INVES"
   },
   {
     "symbol": "ISATR",
-    "name": ""
+    "name": "ISATR ISBTR ISCTR ISKUR TIB"
   },
   {
     "symbol": "ISBIR",
-    "name": ""
-  },
-  {
-    "symbol": "ISBTR",
-    "name": ""
-  },
-  {
-    "symbol": "ISCTR",
-    "name": "İş Bankası C"
+    "name": "ISBIR"
   },
   {
     "symbol": "ISDMR",
-    "name": "İskenderun Demir Çelik"
+    "name": "ISDMR"
+  },
+  {
+    "symbol": "ISFAK",
+    "name": "ISFAK"
   },
   {
     "symbol": "ISFIN",
-    "name": "İş Finansal Kiralama"
-  },
-  {
-    "symbol": "ISGLK",
-    "name": ""
+    "name": "ISFIN"
   },
   {
     "symbol": "ISGSY",
-    "name": ""
+    "name": "ISGSY"
   },
   {
     "symbol": "ISGYO",
-    "name": "İş GYO"
-  },
-  {
-    "symbol": "ISIST",
-    "name": ""
+    "name": "ISGYO"
   },
   {
     "symbol": "ISKPL",
-    "name": ""
-  },
-  {
-    "symbol": "ISKUR",
-    "name": ""
+    "name": "ISKPL"
   },
   {
     "symbol": "ISMEN",
-    "name": "İş Yatırım"
+    "name": "ISMEN IYM"
   },
   {
     "symbol": "ISSEN",
-    "name": ""
+    "name": "ISSEN"
+  },
+  {
+    "symbol": "ISTFK",
+    "name": "ISTFK"
+  },
+  {
+    "symbol": "ISTVY",
+    "name": "ISTVY"
+  },
+  {
+    "symbol": "ISVEA",
+    "name": "ISVEA"
   },
   {
     "symbol": "ISYAT",
-    "name": ""
+    "name": "ISYAT"
   },
   {
     "symbol": "IZENR",
-    "name": "İzdemir Enerji"
+    "name": "IZENR"
   },
   {
     "symbol": "IZFAS",
-    "name": ""
+    "name": "IZFAS"
   },
   {
     "symbol": "IZINV",
-    "name": ""
+    "name": "IZINV"
   },
   {
     "symbol": "IZMDC",
-    "name": "İzmir Demir Çelik"
+    "name": "IZMDC"
   },
   {
     "symbol": "JANTS",
-    "name": "Jantsa"
+    "name": "JANTS"
   },
   {
     "symbol": "KAPLM",
-    "name": ""
+    "name": "KAPLM"
+  },
+  {
+    "symbol": "KARCL",
+    "name": "KARCL"
   },
   {
     "symbol": "KAREL",
-    "name": ""
+    "name": "KAREL"
   },
   {
     "symbol": "KARSN",
-    "name": "Karsan"
+    "name": "KARSN"
   },
   {
     "symbol": "KARTN",
-    "name": "Kartonsan"
+    "name": "KARTN"
   },
   {
     "symbol": "KATMR",
-    "name": ""
+    "name": "KATMR"
+  },
+  {
+    "symbol": "KATVK",
+    "name": "KATVK"
   },
   {
     "symbol": "KAYSE",
-    "name": ""
+    "name": "KAYSE"
   },
   {
     "symbol": "KBORU",
-    "name": ""
+    "name": "KBORU"
   },
   {
     "symbol": "KCAER",
-    "name": "Kocaer Çelik"
+    "name": "KCAER"
   },
   {
     "symbol": "KCHOL",
-    "name": "Koç Holding"
+    "name": "KCHOL"
   },
   {
     "symbol": "KENT",
-    "name": ""
+    "name": "KENT"
   },
   {
     "symbol": "KERVN",
-    "name": ""
+    "name": "KERVN"
   },
   {
     "symbol": "KFEIN",
-    "name": ""
+    "name": "KFEIN"
+  },
+  {
+    "symbol": "KFILO",
+    "name": "KFILO"
   },
   {
     "symbol": "KGYO",
-    "name": ""
+    "name": "KGYO"
   },
   {
     "symbol": "KIMMR",
-    "name": ""
+    "name": "KIMMR"
   },
   {
     "symbol": "KLGYO",
-    "name": "Kiler GYO"
+    "name": "KLGYO"
   },
   {
     "symbol": "KLKIM",
-    "name": ""
+    "name": "KLKIM"
   },
   {
     "symbol": "KLMSN",
-    "name": ""
+    "name": "KLMSN"
   },
   {
-    "symbol": "KLNMA",
-    "name": ""
+    "symbol": "KLN",
+    "name": "KLN KLNMA"
   },
   {
     "symbol": "KLRHO",
-    "name": "Kiler Holding"
+    "name": "KLRHO"
   },
   {
     "symbol": "KLSER",
-    "name": ""
+    "name": "KLSER"
   },
   {
     "symbol": "KLSYN",
-    "name": ""
+    "name": "KLSYN"
+  },
+  {
+    "symbol": "KLVKS",
+    "name": "KLVKS"
   },
   {
     "symbol": "KLYPV",
-    "name": ""
+    "name": "KLYPV"
   },
   {
     "symbol": "KMPUR",
-    "name": "Kimteks Poliüretan"
+    "name": "KMPUR"
   },
   {
     "symbol": "KNFRT",
-    "name": "Konfrut"
+    "name": "KNFRT"
+  },
+  {
+    "symbol": "KNTFA",
+    "name": "KNTFA"
+  },
+  {
+    "symbol": "KOCFN",
+    "name": "KOCFN"
   },
   {
     "symbol": "KOCMT",
-    "name": ""
+    "name": "KOCMT"
   },
   {
     "symbol": "KONKA",
-    "name": "Konka"
+    "name": "KONKA"
   },
   {
     "symbol": "KONTR",
-    "name": "Kontrolmatik"
+    "name": "KONTR"
   },
   {
     "symbol": "KONYA",
-    "name": "Konya Çimento"
+    "name": "KONYA"
   },
   {
     "symbol": "KOPOL",
-    "name": "Koza Polyester"
+    "name": "KOPOL"
   },
   {
     "symbol": "KORDS",
-    "name": "Kordsa"
+    "name": "KORDS"
+  },
+  {
+    "symbol": "KORTS",
+    "name": "KORTS"
   },
   {
     "symbol": "KOTON",
-    "name": "Koton"
+    "name": "KOTON"
+  },
+  {
+    "symbol": "KPEKS",
+    "name": "KPEKS"
+  },
+  {
+    "symbol": "KPTGY",
+    "name": "KPTGY"
   },
   {
     "symbol": "KRDMA",
-    "name": ""
-  },
-  {
-    "symbol": "KRDMB",
-    "name": ""
-  },
-  {
-    "symbol": "KRDMD",
-    "name": "Kardemir D"
+    "name": "KRDMA KRDMB KRDMD"
   },
   {
     "symbol": "KRGYO",
-    "name": ""
+    "name": "KRGYO"
   },
   {
     "symbol": "KRONT",
-    "name": ""
+    "name": "KRONT"
   },
   {
     "symbol": "KRPLS",
-    "name": ""
+    "name": "KRPLS"
   },
   {
     "symbol": "KRSTL",
-    "name": ""
+    "name": "KRSTL"
   },
   {
     "symbol": "KRTEK",
-    "name": ""
+    "name": "KRTEK"
   },
   {
     "symbol": "KRVGD",
-    "name": "Kervan Gıda"
+    "name": "KRVGD"
+  },
+  {
+    "symbol": "KSFIN",
+    "name": "KSFIN"
   },
   {
     "symbol": "KSTUR",
-    "name": ""
+    "name": "KSTUR"
+  },
+  {
+    "symbol": "KTKVK",
+    "name": "KTKVK"
   },
   {
     "symbol": "KTLEV",
-    "name": "Katılımevim"
+    "name": "KTLEV"
   },
   {
     "symbol": "KTSKR",
-    "name": ""
+    "name": "KTSKR"
+  },
+  {
+    "symbol": "KTSVK",
+    "name": "KTSVK"
   },
   {
     "symbol": "KUTPO",
-    "name": ""
+    "name": "KUTPO"
   },
   {
     "symbol": "KUVVA",
-    "name": ""
+    "name": "KUVVA"
   },
   {
     "symbol": "KUYAS",
-    "name": "Kuyas"
+    "name": "KUYAS"
   },
   {
     "symbol": "KZBGY",
-    "name": ""
+    "name": "KZBGY"
   },
   {
     "symbol": "KZGYO",
-    "name": ""
+    "name": "KZGYO"
   },
   {
     "symbol": "LIDER",
-    "name": "Lider Turizm"
+    "name": "LIDER"
   },
   {
     "symbol": "LIDFA",
-    "name": ""
+    "name": "LIDFA"
   },
   {
     "symbol": "LILAK",
-    "name": ""
+    "name": "LILAK"
   },
   {
     "symbol": "LINK",
-    "name": "Link Bilgisayar"
+    "name": "LINK"
   },
   {
     "symbol": "LKMNH",
-    "name": ""
+    "name": "LKMNH"
   },
   {
     "symbol": "LMKDC",
-    "name": "Limak Doğu Anadolu Çimento"
+    "name": "LMKDC"
   },
   {
     "symbol": "LOGO",
-    "name": ""
+    "name": "LOGO"
   },
   {
     "symbol": "LRSHO",
-    "name": ""
+    "name": "LRSHO"
   },
   {
     "symbol": "LUKSK",
-    "name": ""
+    "name": "LUKSK"
+  },
+  {
+    "symbol": "LXGYO",
+    "name": "LXGYO"
   },
   {
     "symbol": "LYDHO",
-    "name": ""
+    "name": "LYDHO"
   },
   {
     "symbol": "LYDYE",
-    "name": ""
+    "name": "LYDYE"
   },
   {
     "symbol": "MAALT",
-    "name": ""
+    "name": "MAALT"
   },
   {
     "symbol": "MACKO",
-    "name": ""
+    "name": "MACKO"
   },
   {
     "symbol": "MAGEN",
-    "name": "Margün Enerji"
+    "name": "MAGEN"
   },
   {
     "symbol": "MAKIM",
-    "name": "Makim"
+    "name": "MAKIM"
   },
   {
     "symbol": "MAKTK",
-    "name": ""
+    "name": "MAKTK"
   },
   {
     "symbol": "MANAS",
-    "name": ""
+    "name": "MANAS"
   },
   {
     "symbol": "MARBL",
-    "name": "Marble Systems"
-  },
-  {
-    "symbol": "MARKA",
-    "name": ""
+    "name": "MARBL"
   },
   {
     "symbol": "MARMR",
-    "name": ""
+    "name": "MARMR"
   },
   {
     "symbol": "MARTI",
-    "name": "Martı Otel"
+    "name": "MARTI"
+  },
+  {
+    "symbol": "MASFN",
+    "name": "MASFN"
   },
   {
     "symbol": "MAVI",
-    "name": "Mavi"
+    "name": "MAVI"
+  },
+  {
+    "symbol": "MBFTR",
+    "name": "MBFTR"
+  },
+  {
+    "symbol": "MCARD",
+    "name": "MCARD"
+  },
+  {
+    "symbol": "MDASM",
+    "name": "MDASM MDS"
+  },
+  {
+    "symbol": "MDIAZ",
+    "name": "MDIAZ"
   },
   {
     "symbol": "MEDTR",
-    "name": "Meditera"
+    "name": "MEDTR"
   },
   {
     "symbol": "MEGAP",
-    "name": ""
+    "name": "MEGAP"
   },
   {
     "symbol": "MEGMT",
-    "name": "Mega Metal"
+    "name": "MEGMT"
   },
   {
     "symbol": "MEKAG",
-    "name": ""
+    "name": "MEKAG"
+  },
+  {
+    "symbol": "MEKMD",
+    "name": "MEKMD MSA"
   },
   {
     "symbol": "MEPET",
-    "name": "Mepet"
+    "name": "MEPET"
   },
   {
     "symbol": "MERCN",
-    "name": ""
+    "name": "MERCN"
   },
   {
     "symbol": "MERIT",
-    "name": ""
+    "name": "MERIT"
   },
   {
     "symbol": "MERKO",
-    "name": ""
+    "name": "MERKO"
+  },
+  {
+    "symbol": "METEN",
+    "name": "METEN"
   },
   {
     "symbol": "METRO",
-    "name": "Metro Holding"
+    "name": "METRO"
   },
   {
     "symbol": "MEYSU",
-    "name": ""
+    "name": "MEYSU"
   },
   {
     "symbol": "MGROS",
-    "name": "Migros"
+    "name": "MGROS"
   },
   {
     "symbol": "MHRGY",
-    "name": ""
+    "name": "MHRGY"
   },
   {
     "symbol": "MIATK",
-    "name": "Mia Teknoloji"
+    "name": "MIATK"
+  },
+  {
+    "symbol": "MILKS",
+    "name": "MILKS"
+  },
+  {
+    "symbol": "MINTF",
+    "name": "MINTF"
   },
   {
     "symbol": "MMCAS",
-    "name": ""
+    "name": "MMCAS"
   },
   {
     "symbol": "MNDRS",
-    "name": ""
+    "name": "MNDRS"
   },
   {
     "symbol": "MNDTR",
-    "name": "Mondelēz?"
+    "name": "MNDTR"
+  },
+  {
+    "symbol": "MNGFA",
+    "name": "MNGFA"
   },
   {
     "symbol": "MOBTL",
-    "name": "Mobiltel"
+    "name": "MOBTL"
   },
   {
     "symbol": "MOGAN",
-    "name": ""
+    "name": "MOGAN"
   },
   {
     "symbol": "MOPAS",
-    "name": ""
+    "name": "MOPAS"
   },
   {
     "symbol": "MPARK",
-    "name": ""
+    "name": "MPARK"
+  },
+  {
+    "symbol": "MRBAS",
+    "name": "MRBAS MRS"
+  },
+  {
+    "symbol": "MRBKF",
+    "name": "MRBKF"
   },
   {
     "symbol": "MRGYO",
-    "name": ""
+    "name": "MRGYO"
+  },
+  {
+    "symbol": "MRMAG",
+    "name": "MRMAG"
   },
   {
     "symbol": "MRSHL",
-    "name": ""
+    "name": "MRSHL"
   },
   {
     "symbol": "MSGYO",
-    "name": ""
+    "name": "MSGYO"
+  },
+  {
+    "symbol": "MSY",
+    "name": "MSY MSYBN"
   },
   {
     "symbol": "MTRKS",
-    "name": ""
+    "name": "MTRKS"
   },
   {
     "symbol": "MTRYO",
-    "name": ""
+    "name": "MTRYO"
   },
   {
     "symbol": "MZHLD",
-    "name": ""
+    "name": "MZHLD"
   },
   {
     "symbol": "NATEN",
-    "name": ""
+    "name": "NATEN"
   },
   {
     "symbol": "NETAS",
-    "name": "Netaş"
+    "name": "NETAS"
   },
   {
     "symbol": "NETCD",
-    "name": ""
+    "name": "NETCD"
   },
   {
     "symbol": "NIBAS",
-    "name": ""
+    "name": "NIBAS"
   },
   {
-    "symbol": "NPTLR",
-    "name": ""
+    "symbol": "NRBNK",
+    "name": "NRBNK NYB"
   },
   {
     "symbol": "NTGAZ",
-    "name": "Naturelgaz"
+    "name": "NTGAZ"
   },
   {
     "symbol": "NTHOL",
-    "name": ""
+    "name": "NTHOL"
   },
   {
     "symbol": "NUGYO",
-    "name": ""
+    "name": "NUGYO"
   },
   {
     "symbol": "NUHCM",
-    "name": "Nuh Çimento"
+    "name": "NUHCM"
+  },
+  {
+    "symbol": "NURVK",
+    "name": "NURVK"
   },
   {
     "symbol": "OBAMS",
-    "name": "Oba Makarnacılık"
+    "name": "OBAMS"
   },
   {
     "symbol": "OBASE",
-    "name": "Obase"
+    "name": "OBASE"
   },
   {
     "symbol": "ODAS",
-    "name": "Odaş"
+    "name": "ODAS"
   },
   {
     "symbol": "ODINE",
-    "name": ""
+    "name": "ODINE"
   },
   {
     "symbol": "OFSYM",
-    "name": "Ofis Yem"
+    "name": "OFSYM"
+  },
+  {
+    "symbol": "OMD",
+    "name": "OMD OSMEN"
   },
   {
     "symbol": "ONCSM",
-    "name": "Oncosem"
+    "name": "ONCSM"
   },
   {
     "symbol": "ONRYT",
-    "name": "Onur Yüksek Teknoloji"
+    "name": "ONRYT"
+  },
+  {
+    "symbol": "OPET",
+    "name": "OPET"
   },
   {
     "symbol": "ORCAY",
-    "name": ""
+    "name": "ORCAY"
+  },
+  {
+    "symbol": "ORFIN",
+    "name": "ORFIN"
   },
   {
     "symbol": "ORGE",
-    "name": "Orge Enerji"
+    "name": "ORGE"
   },
   {
     "symbol": "ORMA",
-    "name": ""
+    "name": "ORMA"
   },
   {
-    "symbol": "OSMEN",
-    "name": ""
+    "symbol": "ORZAX",
+    "name": "ORZAX"
   },
   {
     "symbol": "OSTIM",
-    "name": "Ostim Endüstriyel"
+    "name": "OSTIM"
+  },
+  {
+    "symbol": "OSVKS",
+    "name": "OSVKS"
   },
   {
     "symbol": "OTKAR",
-    "name": ""
+    "name": "OTKAR"
+  },
+  {
+    "symbol": "OTOSR",
+    "name": "OTOSR"
   },
   {
     "symbol": "OTTO",
-    "name": ""
+    "name": "OTTO"
+  },
+  {
+    "symbol": "OYA",
+    "name": "OYA OYYAT"
   },
   {
     "symbol": "OYAKC",
-    "name": "Oyak Çimento"
+    "name": "OYAKC"
   },
   {
     "symbol": "OYAYO",
-    "name": ""
+    "name": "OYAYO"
   },
   {
     "symbol": "OYLUM",
-    "name": ""
-  },
-  {
-    "symbol": "OYYAT",
-    "name": ""
+    "name": "OYLUM"
   },
   {
     "symbol": "OZATD",
-    "name": ""
+    "name": "OZATD"
   },
   {
     "symbol": "OZGYO",
-    "name": ""
+    "name": "OZGYO"
   },
   {
     "symbol": "OZKGY",
-    "name": "Özak GYO"
+    "name": "OZKGY"
   },
   {
     "symbol": "OZRDN",
-    "name": ""
+    "name": "OZRDN"
   },
   {
     "symbol": "OZSUB",
-    "name": ""
+    "name": "OZSUB"
   },
   {
     "symbol": "OZYSR",
-    "name": ""
+    "name": "OZYSR"
   },
   {
     "symbol": "PAGYO",
-    "name": "Panora GYO"
+    "name": "PAGYO"
   },
   {
     "symbol": "PAHOL",
-    "name": ""
+    "name": "PAHOL"
   },
   {
     "symbol": "PAMEL",
-    "name": ""
+    "name": "PAMEL"
   },
   {
     "symbol": "PAPIL",
-    "name": ""
+    "name": "PAPIL"
   },
   {
     "symbol": "PARSN",
-    "name": "Parsan"
+    "name": "PARSN"
   },
   {
     "symbol": "PASEU",
-    "name": "Pasifik Eurasia"
+    "name": "PASEU"
   },
   {
     "symbol": "PATEK",
-    "name": ""
+    "name": "PATEK"
+  },
+  {
+    "symbol": "PBT",
+    "name": "PBT PBTR"
   },
   {
     "symbol": "PCILT",
-    "name": "PC İletişim"
+    "name": "PCILT"
   },
   {
     "symbol": "PEKGY",
-    "name": "Peker GYO"
+    "name": "PEKGY"
   },
   {
     "symbol": "PENGD",
-    "name": ""
+    "name": "PENGD"
   },
   {
     "symbol": "PENTA",
-    "name": "Penta Teknoloji"
+    "name": "PENTA"
   },
   {
     "symbol": "PETKM",
-    "name": "Petkim"
+    "name": "PETKM"
   },
   {
     "symbol": "PETUN",
-    "name": "Pınar Et"
+    "name": "PETUN"
   },
   {
     "symbol": "PGSUS",
-    "name": "Pegasus"
+    "name": "PGSUS"
   },
   {
     "symbol": "PINSU",
-    "name": "Pınar Su"
+    "name": "PINSU"
   },
   {
     "symbol": "PKART",
-    "name": "Plastikkart"
+    "name": "PKART"
   },
   {
     "symbol": "PKENT",
-    "name": ""
+    "name": "PKENT"
   },
   {
     "symbol": "PLTUR",
-    "name": "Platform Turizm"
+    "name": "PLTUR"
   },
   {
     "symbol": "PNLSN",
-    "name": "Panelsan"
+    "name": "PNLSN"
   },
   {
     "symbol": "PNSUT",
-    "name": "Pınar Süt"
+    "name": "PNSUT"
   },
   {
     "symbol": "POLHO",
-    "name": "Polisan Holding"
+    "name": "POLHO"
   },
   {
     "symbol": "POLTK",
-    "name": ""
+    "name": "POLTK"
   },
   {
     "symbol": "PRDGS",
-    "name": ""
+    "name": "PRDGS"
+  },
+  {
+    "symbol": "PRFFK",
+    "name": "PRFFK"
   },
   {
     "symbol": "PRKAB",
-    "name": ""
+    "name": "PRKAB"
   },
   {
     "symbol": "PRKME",
-    "name": ""
+    "name": "PRKME"
   },
   {
     "symbol": "PRZMA",
-    "name": ""
+    "name": "PRZMA"
   },
   {
     "symbol": "PSDTC",
-    "name": ""
+    "name": "PSDTC"
   },
   {
     "symbol": "PSGYO",
-    "name": ""
+    "name": "PSGYO"
+  },
+  {
+    "symbol": "QNBFF",
+    "name": "QNBFF"
   },
   {
     "symbol": "QNBFK",
-    "name": ""
+    "name": "QNBFK"
   },
   {
-    "symbol": "QNBTR",
-    "name": ""
+    "symbol": "QNBVK",
+    "name": "QNBVK"
   },
   {
     "symbol": "QUAGR",
-    "name": "Qua Granite"
+    "name": "QUAGR"
+  },
+  {
+    "symbol": "QUFIN",
+    "name": "QUFIN"
+  },
+  {
+    "symbol": "QUICK",
+    "name": "QUICK"
+  },
+  {
+    "symbol": "QYATB",
+    "name": "QYATB YBQ"
+  },
+  {
+    "symbol": "QYHOL",
+    "name": "QYHOL"
   },
   {
     "symbol": "RALYH",
-    "name": "Ral Yapı"
+    "name": "RALYH"
   },
   {
     "symbol": "RAYSG",
-    "name": "Ray Sigorta"
+    "name": "RAYSG"
   },
   {
     "symbol": "REEDR",
-    "name": "Reeder Teknoloji"
+    "name": "REEDR"
   },
   {
     "symbol": "RGYAS",
-    "name": "Rönesans GYO"
+    "name": "RGYAS"
   },
   {
     "symbol": "RNPOL",
-    "name": "Rainbow Polikarbonat"
+    "name": "RNPOL"
   },
   {
     "symbol": "RODRG",
-    "name": "Rodrigo Tekstil"
+    "name": "RODRG"
   },
   {
     "symbol": "RTALB",
-    "name": ""
+    "name": "RTALB"
   },
   {
     "symbol": "RUBNS",
-    "name": ""
+    "name": "RUBNS"
   },
   {
     "symbol": "RUZYE",
-    "name": ""
+    "name": "RUZYE"
   },
   {
     "symbol": "RYGYO",
-    "name": ""
+    "name": "RYGYO"
   },
   {
     "symbol": "RYSAS",
-    "name": "Reysaş Lojistik"
+    "name": "RYSAS"
   },
   {
     "symbol": "SAFKR",
-    "name": "Safkar"
+    "name": "SAFKR"
   },
   {
     "symbol": "SAHOL",
-    "name": "Sabancı Holding"
+    "name": "SAHOL"
   },
   {
     "symbol": "SAMAT",
-    "name": "Saray Matbaacılık"
+    "name": "SAMAT"
   },
   {
     "symbol": "SANEL",
-    "name": ""
+    "name": "SANEL"
   },
   {
     "symbol": "SANFM",
-    "name": ""
+    "name": "SANFM"
   },
   {
     "symbol": "SANKO",
-    "name": "Sanko Pazarlama"
+    "name": "SANKO"
+  },
+  {
+    "symbol": "SARAE",
+    "name": "SARAE"
   },
   {
     "symbol": "SARKY",
-    "name": ""
+    "name": "SARKY"
+  },
+  {
+    "symbol": "SARTN",
+    "name": "SARTN"
   },
   {
     "symbol": "SASA",
-    "name": "Sasa Polyester"
+    "name": "SASA"
   },
   {
     "symbol": "SAYAS",
-    "name": ""
+    "name": "SAYAS"
   },
   {
     "symbol": "SDTTR",
-    "name": ""
+    "name": "SDTTR"
   },
   {
     "symbol": "SEGMN",
-    "name": ""
+    "name": "SEGMN"
   },
   {
     "symbol": "SEGYO",
-    "name": ""
+    "name": "SEGYO"
+  },
+  {
+    "symbol": "SEK",
+    "name": "SEK SKBNK"
   },
   {
     "symbol": "SEKFK",
-    "name": ""
+    "name": "SEKFK"
   },
   {
     "symbol": "SEKUR",
-    "name": ""
+    "name": "SEKUR"
   },
   {
     "symbol": "SELEC",
-    "name": "Selçuk Ecza"
+    "name": "SELEC"
   },
   {
     "symbol": "SELVA",
-    "name": "Selva Gıda"
+    "name": "SELVA"
   },
   {
     "symbol": "SERNT",
-    "name": ""
+    "name": "SERNT"
   },
   {
     "symbol": "SEYKM",
-    "name": ""
+    "name": "SEYKM"
   },
   {
     "symbol": "SILVR",
-    "name": "Silverline"
+    "name": "SILVR"
   },
   {
     "symbol": "SISE",
-    "name": "Şişecam"
-  },
-  {
-    "symbol": "SKBNK",
-    "name": "Şekerbank"
+    "name": "SISE"
   },
   {
     "symbol": "SKTAS",
-    "name": ""
+    "name": "SKTAS"
+  },
+  {
+    "symbol": "SKY",
+    "name": "SKY SKYMD"
   },
   {
     "symbol": "SKYLP",
-    "name": ""
-  },
-  {
-    "symbol": "SKYMD",
-    "name": ""
+    "name": "SKYLP"
   },
   {
     "symbol": "SMART",
-    "name": "Smartiks"
+    "name": "SMART"
+  },
+  {
+    "symbol": "SMRFA",
+    "name": "SMRFA"
   },
   {
     "symbol": "SMRTG",
-    "name": "Smart Güneş"
+    "name": "SMRTG"
   },
   {
     "symbol": "SMRVA",
-    "name": ""
+    "name": "SMRVA"
   },
   {
     "symbol": "SNGYO",
-    "name": "Sinpaş GYO"
+    "name": "SNGYO"
   },
   {
     "symbol": "SNICA",
-    "name": ""
+    "name": "SNICA"
   },
   {
     "symbol": "SNPAM",
-    "name": ""
+    "name": "SNPAM"
   },
   {
     "symbol": "SODSN",
-    "name": ""
+    "name": "SODSN"
+  },
+  {
+    "symbol": "SOHOE",
+    "name": "SOHOE"
   },
   {
     "symbol": "SOKE",
-    "name": "Söke Değirmencilik"
+    "name": "SOKE"
   },
   {
     "symbol": "SOKM",
-    "name": ""
+    "name": "SOKM"
   },
   {
     "symbol": "SONME",
-    "name": ""
+    "name": "SONME"
   },
   {
     "symbol": "SRVGY",
-    "name": ""
+    "name": "SRVGY"
+  },
+  {
+    "symbol": "SSAAT",
+    "name": "SSAAT"
   },
   {
     "symbol": "SUMAS",
-    "name": "Sumaş"
+    "name": "SUMAS"
   },
   {
     "symbol": "SUNTK",
-    "name": ""
+    "name": "SUNTK"
   },
   {
     "symbol": "SURGY",
-    "name": "Sur Tatil Evleri"
+    "name": "SURGY"
   },
   {
     "symbol": "SUWEN",
-    "name": "Suwen"
+    "name": "SUWEN"
+  },
+  {
+    "symbol": "SVGYO",
+    "name": "SVGYO"
   },
   {
     "symbol": "TABGD",
-    "name": "Tab Gıda"
+    "name": "TABGD"
+  },
+  {
+    "symbol": "TAC",
+    "name": "TAC TCRYT"
+  },
+  {
+    "symbol": "TAE",
+    "name": "TAE TRBNK"
+  },
+  {
+    "symbol": "TAMFA",
+    "name": "TAMFA"
+  },
+  {
+    "symbol": "TARFN",
+    "name": "TARFN"
   },
   {
     "symbol": "TARKM",
-    "name": "Tarkim"
+    "name": "TARKM"
   },
   {
     "symbol": "TATEN",
-    "name": "Tatlıpınar Enerji"
+    "name": "TATEN"
   },
   {
     "symbol": "TATGD",
-    "name": "Tat Gıda"
+    "name": "TATGD"
   },
   {
     "symbol": "TAVHL",
-    "name": "TAV Havalimanları"
+    "name": "TAVHL"
   },
   {
     "symbol": "TBORG",
-    "name": "Türk Tuborg"
+    "name": "TBORG"
   },
   {
     "symbol": "TCELL",
-    "name": "Turkcell"
+    "name": "TCELL"
   },
   {
     "symbol": "TCKRC",
-    "name": ""
+    "name": "TCKRC"
   },
   {
     "symbol": "TDGYO",
-    "name": ""
+    "name": "TDGYO"
+  },
+  {
+    "symbol": "TEBFA",
+    "name": "TEBFA"
   },
   {
     "symbol": "TEHOL",
-    "name": ""
+    "name": "TEHOL"
   },
   {
     "symbol": "TEKTU",
-    "name": ""
+    "name": "TEKTU"
   },
   {
     "symbol": "TERA",
-    "name": ""
+    "name": "TERA TRA"
+  },
+  {
+    "symbol": "TEVKS",
+    "name": "TEVKS"
   },
   {
     "symbol": "TEZOL",
-    "name": "Tezol Kağıt"
+    "name": "TEZOL"
+  },
+  {
+    "symbol": "TFNVK",
+    "name": "TFNVK"
   },
   {
     "symbol": "TGSAS",
-    "name": ""
+    "name": "TGSAS"
   },
   {
     "symbol": "THYAO",
-    "name": "Türk Hava Yolları"
+    "name": "THYAO"
+  },
+  {
+    "symbol": "TIMUR",
+    "name": "TIMUR"
   },
   {
     "symbol": "TKFEN",
-    "name": "Tekfen Holding"
+    "name": "TKFEN"
+  },
+  {
+    "symbol": "TKNKA",
+    "name": "TKNKA"
   },
   {
     "symbol": "TKNSA",
-    "name": "Teknosa"
+    "name": "TKNSA"
   },
   {
     "symbol": "TLMAN",
-    "name": ""
+    "name": "TLMAN"
   },
   {
     "symbol": "TMPOL",
-    "name": ""
+    "name": "TMPOL"
   },
   {
     "symbol": "TMSN",
-    "name": "Tümosan"
+    "name": "TMSN"
   },
   {
     "symbol": "TNZTP",
-    "name": ""
+    "name": "TNZTP"
   },
   {
     "symbol": "TOASO",
-    "name": "Tofaş"
+    "name": "TOASO"
   },
   {
     "symbol": "TRALT",
-    "name": ""
+    "name": "TRALT"
   },
   {
     "symbol": "TRCAS",
-    "name": "Turcas"
+    "name": "TRCAS"
   },
   {
     "symbol": "TRENJ",
-    "name": ""
+    "name": "TRENJ"
+  },
+  {
+    "symbol": "TRFFA",
+    "name": "TRFFA"
   },
   {
     "symbol": "TRGYO",
-    "name": "Torunlar GYO"
+    "name": "TRGYO"
   },
   {
     "symbol": "TRHOL",
-    "name": ""
+    "name": "TRHOL"
   },
   {
     "symbol": "TRILC",
-    "name": "Turk İlaç"
+    "name": "TRILC"
+  },
+  {
+    "symbol": "TRKFN",
+    "name": "TRKFN"
+  },
+  {
+    "symbol": "TRKNT",
+    "name": "TRKNT"
+  },
+  {
+    "symbol": "TRMEN",
+    "name": "TRMEN TVM"
   },
   {
     "symbol": "TRMET",
-    "name": ""
+    "name": "TRMET"
+  },
+  {
+    "symbol": "TRYKI",
+    "name": "TRYKI"
   },
   {
     "symbol": "TSGYO",
-    "name": ""
+    "name": "TSGYO"
   },
   {
-    "symbol": "TSKB",
-    "name": "TSKB"
+    "symbol": "TSK",
+    "name": "TSK TSKB"
   },
   {
     "symbol": "TSPOR",
-    "name": ""
+    "name": "TSPOR"
   },
   {
     "symbol": "TTKOM",
-    "name": "Türk Telekom"
+    "name": "TTKOM"
   },
   {
     "symbol": "TTRAK",
-    "name": ""
+    "name": "TTRAK"
   },
   {
     "symbol": "TUCLK",
-    "name": ""
+    "name": "TUCLK"
   },
   {
     "symbol": "TUKAS",
-    "name": "Tukaş"
+    "name": "TUKAS"
   },
   {
     "symbol": "TUPRS",
-    "name": "Tüpraş"
+    "name": "TUPRS"
   },
   {
     "symbol": "TUREX",
-    "name": ""
+    "name": "TUREX"
   },
   {
     "symbol": "TURGG",
-    "name": ""
+    "name": "TURGG"
   },
   {
     "symbol": "TURSG",
-    "name": "Türkiye Sigorta"
+    "name": "TURSG"
+  },
+  {
+    "symbol": "TV8TV",
+    "name": "TV8TV"
+  },
+  {
+    "symbol": "TVB",
+    "name": "TVB VAKBN"
   },
   {
     "symbol": "UCAYM",
-    "name": ""
+    "name": "UCAYM"
   },
   {
     "symbol": "UFUK",
-    "name": ""
+    "name": "UFUK"
   },
   {
     "symbol": "ULAS",
-    "name": ""
+    "name": "ULAS"
   },
   {
     "symbol": "ULKER",
-    "name": "Ülker"
+    "name": "ULKER"
   },
   {
     "symbol": "ULUFA",
-    "name": ""
+    "name": "ULUFA"
   },
   {
     "symbol": "ULUSE",
-    "name": "Ulusoy Elektrik"
+    "name": "ULUSE"
   },
   {
     "symbol": "ULUUN",
-    "name": ""
+    "name": "ULUUN"
+  },
+  {
+    "symbol": "UMPAS",
+    "name": "UMPAS"
   },
   {
     "symbol": "UNLU",
-    "name": ""
+    "name": "UNLU"
   },
   {
     "symbol": "USAK",
-    "name": "Uşak Seramik"
+    "name": "USAK"
   },
   {
-    "symbol": "USDTR",
-    "name": ""
-  },
-  {
-    "symbol": "VAKBN",
-    "name": "VakıfBank"
+    "symbol": "USHOL",
+    "name": "USHOL"
   },
   {
     "symbol": "VAKFA",
-    "name": ""
+    "name": "VAKFA"
   },
   {
     "symbol": "VAKFN",
-    "name": ""
+    "name": "VAKFN"
   },
   {
     "symbol": "VAKKO",
-    "name": "Vakko"
+    "name": "VAKKO"
+  },
+  {
+    "symbol": "VAKVK",
+    "name": "VAKVK"
   },
   {
     "symbol": "VANGD",
-    "name": "Vanet Gıda"
+    "name": "VANGD"
   },
   {
     "symbol": "VBTYZ",
-    "name": "VBT Yazılım"
+    "name": "VBTYZ"
+  },
+  {
+    "symbol": "VDFAS",
+    "name": "VDFAS"
+  },
+  {
+    "symbol": "VDFLO",
+    "name": "VDFLO"
   },
   {
     "symbol": "VERTU",
-    "name": "Verusaturk"
+    "name": "VERTU"
   },
   {
     "symbol": "VERUS",
-    "name": ""
+    "name": "VERUS"
   },
   {
     "symbol": "VESBE",
-    "name": "Vestel Beyaz Eşya"
+    "name": "VESBE"
   },
   {
     "symbol": "VESTL",
-    "name": "Vestel"
+    "name": "VESTL"
+  },
+  {
+    "symbol": "VEYAS",
+    "name": "VEYAS"
   },
   {
     "symbol": "VKFYO",
-    "name": ""
+    "name": "VKFYO"
   },
   {
     "symbol": "VKGYO",
-    "name": "Vakıf GYO"
+    "name": "VKGYO"
   },
   {
     "symbol": "VKING",
-    "name": ""
+    "name": "VKING"
   },
   {
     "symbol": "VRGYO",
-    "name": "Vera GYO"
+    "name": "VRGYO"
   },
   {
     "symbol": "VSNMD",
-    "name": ""
+    "name": "VSNMD"
   },
   {
     "symbol": "YAPRK",
-    "name": ""
+    "name": "YAPRK"
   },
   {
     "symbol": "YATAS",
-    "name": "Yataş"
+    "name": "YATAS"
+  },
+  {
+    "symbol": "YATVK",
+    "name": "YATVK"
   },
   {
     "symbol": "YAYLA",
-    "name": "Yayla Agro"
+    "name": "YAYLA"
   },
   {
     "symbol": "YBTAS",
-    "name": ""
+    "name": "YBTAS"
   },
   {
     "symbol": "YEOTK",
-    "name": "Yeo Teknoloji"
+    "name": "YEOTK"
   },
   {
     "symbol": "YESIL",
-    "name": ""
+    "name": "YESIL"
   },
   {
     "symbol": "YGGYO",
-    "name": ""
-  },
-  {
-    "symbol": "YGYO",
-    "name": ""
+    "name": "YGGYO"
   },
   {
     "symbol": "YIGIT",
-    "name": ""
+    "name": "YIGIT"
   },
   {
-    "symbol": "YKBNK",
-    "name": "Yapı Kredi"
+    "symbol": "YKB",
+    "name": "YKB YKBNK"
+  },
+  {
+    "symbol": "YKFIN",
+    "name": "YKFIN"
+  },
+  {
+    "symbol": "YKFKT",
+    "name": "YKFKT"
+  },
+  {
+    "symbol": "YKR",
+    "name": "YKR YKYAT"
   },
   {
     "symbol": "YKSLN",
-    "name": ""
+    "name": "YKSLN"
   },
   {
     "symbol": "YONGA",
-    "name": ""
+    "name": "YONGA"
   },
   {
     "symbol": "YUNSA",
-    "name": "Yünsa"
+    "name": "YUNSA"
   },
   {
     "symbol": "YYAPI",
-    "name": ""
+    "name": "YYAPI"
   },
   {
     "symbol": "YYLGD",
-    "name": "Yayla Agro Gıda"
+    "name": "YYLGD"
   },
   {
     "symbol": "ZEDUR",
-    "name": "Zedur Enerji"
-  },
-  {
-    "symbol": "ZELOT",
-    "name": ""
+    "name": "ZEDUR"
   },
   {
     "symbol": "ZERGY",
-    "name": ""
+    "name": "ZERGY"
   },
   {
     "symbol": "ZGYO",
-    "name": ""
+    "name": "ZGYO"
+  },
+  {
+    "symbol": "ZKBVK",
+    "name": "ZKBVK"
+  },
+  {
+    "symbol": "ZKBVR",
+    "name": "ZKBVR"
   },
   {
     "symbol": "ZOREN",
-    "name": "Zorlu Enerji"
+    "name": "ZOREN"
   },
   {
     "symbol": "ZRGYO",
-    "name": ""
+    "name": "ZRGYO"
   }
 ]

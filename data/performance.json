@@ -1,6 +1,81 @@
 {
-  "guncellendi": null,
-  "evren_gun_sayisi": 0,
-  "ufuklar": {},
-  "stratejiler": {}
+  "guncellendi": "2026-09-07T01:23:52.870013+03:00",
+  "evren_gun_sayisi": 1,
+  "ufuklar": {
+    "1G": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    },
+    "5G": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    },
+    "20G": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    },
+    "60G": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    }
+  },
+  "stratejiler": {
+    "daily": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    },
+    "swing": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    },
+    "trend": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    },
+    "mid_term": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    },
+    "reversal": {
+      "adet": 0,
+      "basari": null,
+      "ortalama": null,
+      "medyan": null,
+      "en_iyi": null,
+      "en_kotu": null
+    }
+  },
+  "not": "Pozitif sonuç, ilgili ufukta fiyatın sinyal gününe göre yükselmesini ifade eder."
 }
