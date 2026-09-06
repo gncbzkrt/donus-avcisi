@@ -1,4 +1,4 @@
-const VERSION='v4.1';
+const VERSION='v4.2';
 let DATA=null, PERF=null, mode='all';
 const favKey='donus_avcisi_favoriler_v26';
 const obsKey='donus_avcisi_gozlemler_v26';
@@ -52,7 +52,15 @@ function bindStars(){document.querySelectorAll('[data-fav]').forEach(b=>b.onclic
 function fmtTech(v){return v==null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString('tr-TR',{maximumFractionDigits:2})}
 function renderLocalChart(symbol){
   const svg=$('#stockChart'); if(!svg)return;
-  fetch(`../api/chart?symbol=${encodeURIComponent(symbol)}&ts=${Date.now()}`,{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  fetch(`../data/charts/${encodeURIComponent(symbol)}.json?ts=${Date.now()}`,{cache:'no-store'})
+    .then(r=>{
+      if(!r.ok) throw Error('Static chart yok');
+      return r.json();
+    })
+    .catch(()=>{
+      return fetch(`../api/chart?symbol=${encodeURIComponent(symbol)}&ts=${Date.now()}`,{cache:'no-store'}).then(r=>r.json());
+    })
+    .then(d=>{
     if(!d.ok||!d.rows?.length)throw Error(d.error||'Grafik verisi yok');
     const rows=d.rows.filter(r=>[r.open,r.high,r.low,r.close].every(v=>Number.isFinite(Number(v))));
     if(rows.length<2)throw Error('Yeterli grafik verisi yok');

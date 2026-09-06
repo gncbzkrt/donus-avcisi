@@ -1,21 +1,35 @@
 name: Günlük BIST Tarama
+
 on:
   schedule:
     - cron: '15 5 * * 1-5'
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   scan:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Python
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - run: pip install -r requirements.txt
-      - run: python scripts/update_universe.py
-      - run: python -m engine.run_scan
+
+      - name: Kurulum
+        run: pip install -r requirements.txt
+
+      - name: KAP evrenini güncelle
+        run: python scripts/update_universe.py
+
+      - name: 756 hisse taraması
+        run: python -m engine.run_scan
+
       - name: Sonuçları kaydet
         run: |
           git config user.name 'reversal-hunter-bot'
