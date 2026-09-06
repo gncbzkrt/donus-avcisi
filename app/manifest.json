@@ -1,0 +1,26 @@
+{
+  "name": "Dönüş Avcısı — BIST Karar Motoru",
+  "short_name": "Dönüş Avcısı",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080b10",
+  "theme_color": "#080b10",
+  "lang": "tr",
+  "description": "600+ BIST hissesi için teknik analiz, dönüş sinyali, favori takip ve performans ölçümü",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

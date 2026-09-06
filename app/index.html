@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b10"><meta name="description" content="Dönüş Avcısı — BIST hissesi için teknik analiz ve karar destek sistemi"><link rel="icon" href="icons/favicon-32.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"><title>Dönüş Avcısı</title>
+</head>
+<body>
+<header><div class="brand"><img src="icons/icon-192.png" alt="Dönüş Avcısı"><div><div class="eyebrow">BIST KARAR MOTORU</div><h1>DÖNÜŞ AVCISI <small id="version">v2.8</small></h1></div></div><button id="refresh" title="Yeni tarama / veriyi yenile">↻</button></header>
+<main>
+<section id="home" class="page active">
+  <section class="hero"><div><span>Piyasa rejimi</span><strong id="regime">—</strong><small id="updated">—</small></div><div class="score"><b id="marketScore">—</b><small>/100</small></div></section>
+  <div class="quick"><div><small>Evren</small><b id="universeCount">—</b><em>şirket</em></div><div><small>Veri</small><b id="scanCount">—</b><em>bulundu</em></div><div><small>Fırsat</small><b id="opportunityCount">—</b><em>uygun kurulum</em></div><div><small>Favori</small><b id="favoriteCount">—</b><em>yerel kayıt</em></div></div>
+  <div class="section-title"><h2>En güçlü fırsatlar</h2><button class="ghost" data-go="opportunities">Tümünü gör</button></div>
+  <div id="homeCards"></div>
+</section>
+<section id="opportunities" class="page">
+  <div class="section-title"><div><h2>Fırsat Radar</h2><span>Karar puanı yüksek kurulumlar</span></div></div>
+  <nav class="tabs"><button class="active" data-mode="all">Genel</button><button data-mode="daily">Günlük</button><button data-mode="swing">Kısa-Orta</button><button data-mode="trend">Trend</button><button data-mode="mid_term">Orta Vade</button><button data-mode="reversal">Dönüş</button></nav>
+  <div id="cards"></div>
+</section>
+<section id="favorites" class="page">
+  <div class="section-title"><div><h2>Favorilerim</h2><span>Favoriye aldığın andan bugüne gelişim</span></div><button class="ghost" id="exportFav">Yedekle</button></div>
+  <div class="favstats" id="favStats"></div>
+  <div id="favoriteCards"></div>
+</section>
+<section id="performance" class="page">
+  <div class="section-title"><div><h2>Performans</h2><span>Sinyallerin geçmiş sonuçlarla ölçümü</span></div></div>
+  <div class="notice">Performans geçmiş tarama kayıtlarından hesaplanır. Bu bölüm yöntemin nerede çalıştığını ölçmek içindir; gelecekteki getiriyi garanti etmez.</div>
+  <h3>Ufuk bazında</h3><div id="horizonStats" class="statgrid"></div>
+  <h3>Strateji bazında</h3><div id="strategyStats" class="statgrid"></div><h3>Sinyal geçmişi</h3><div id="signalHistory" class="signals"></div>
+</section>
+<section id="settings" class="page">
+  <div class="section-title"><div><h2>Ayarlar</h2><span>Yerel ve bağımsız kullanım</span></div></div>
+  <div class="setting"><b>Favoriler</b><span>Telefonundaki tarayıcıda yerel tutulur. Sunucuya gönderilmez.</span></div>
+  <div class="setting"><b>Tema</b><span>Uygulamanın görünümünü cihazında yerel olarak seç.</span><div class="theme-switch"><button data-theme-choice="dark">🌙 Karanlık</button><button data-theme-choice="light">☀️ Aydınlık</button></div></div><button id="importFav" class="wide">Favori yedeğini geri yükle</button><input id="fileInput" type="file" accept="application/json" hidden>
+  <div class="setting"><b>Veri kaynağı</b><span id="dataNote">İş Yatırım günlük tarihsel veri</span></div><div class="setting"><b>Son tarama durumu</b><span id="scanNote">—</span></div>
+  <div class="setting"><b>Kurulum modeli</b><span>Python analiz motoru + bağımsız PWA. APK zorunlu değildir.</span></div><div class="guide"><div class="guide-head"><b>📘 Dönüş Avcısı nasıl okunur?</b></div><p><b>Skor:</b> Genel karar gücü. <b>Dip:</b> Satış baskısı ve dip kalitesi. <b>Dönüş:</b> Alıcıların devreye girme gücü. <b>Güven:</b> Sinyalin teyit seviyesi.</p><p><b>Stop</b> risk sınırını, <b>H1/H2</b> hedef bölgelerini, <b>R/R</b> risk-getiri oranını gösterir. “Dönüş Teyitli” en güçlü teyitli durumdur; “Erken Dönüş” daha erken ve daha risklidir.</p><p>Favoriler yalnızca bu cihazda tutulur. Tarama sonuçları ortak, kişisel favoriler cihaz özeldir.</p></div>
+  <div class="setting"><b>Tarama evreni</b><span id="universeInfo">—</span></div>
+</section>
+<section id="stock-detail" class="page">
+  <div class="detail-head">
+    <button class="ghost" id="detailTopBack">← Geri</button>
+    <div><div class="eyebrow">CANLI HİSSE ANALİZİ</div><h2 id="detailTitle">—</h2></div>
+    <span class="state" id="detailState">—</span>
+  </div>
+  <div class="detail-price"><div><small>Güncel fiyat</small><strong id="detailPrice">—</strong></div><div><small>Dönüş Avcısı güven</small><strong id="detailScore">—</strong></div></div>
+  <div class="tv-wrap" id="detailLive"></div>
+  <div class="detail-actions" id="detailActions"></div>
+  <div class="detail-plan" id="detailPlan"></div>
+  <section class="detail-section"><div class="section-title"><h3>Karar motoru</h3></div><div class="detail-grid" id="detailScores"></div><div class="detail-reason" id="detailReason">—</div></section>
+  <section class="detail-section"><div class="section-title"><h3>Teknik göstergeler</h3><span>Son tarama</span></div><div class="detail-grid" id="detailTechnicals"></div></section>
+  <div class="notice">Grafik TradingView Advanced Chart widget ile gömülür. Gösterilen piyasa verisinin gerçek zamanlı / gecikmeli olması TradingView ve ilgili BIST veri dağıtım seviyesine bağlıdır.</div>
+</section>
+</main>
+<nav class="bottom"><button class="active" data-page="home">⌂<span>Ana Sayfa</span></button><button data-page="opportunities">⌁<span>Fırsatlar</span></button><button data-page="favorites">★<span>Favoriler</span></button><button data-page="performance">◔<span>Performans</span></button><button data-page="settings">⚙<span>Ayarlar</span></button></nav>
+<div id="toast"></div><script src="app.js"></script><script>if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+</body></html>
