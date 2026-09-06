@@ -39,31 +39,74 @@ def scan_one(symbol):
     provider=FallbackProvider(timeout=TIMEOUT,delay=DELAY)
     try:
         result=provider.history(symbol,period='2y')
-        df, source = result if isinstance(result,tuple) else (result, getattr(provider,'name','BIST'))
+        df,source=result if isinstance(result,tuple) else (result,getattr(provider,'name','BIST'))
+
         if df.empty:
             return {'symbol':symbol,'status':'DATA_UNAVAILABLE','error':'Veri yok'}
+
         rev=analyze_reversal(df)
-        if not rev['ready']:
-            return {'symbol':symbol,'source':source,'ready':False,'state':'NO_SETUP','status':'SHORT_HISTORY','history_bars':int(len(df)),'price':float(df.close.iloc[-1]),'confidence':0,'dip_score':0,'turn_score':0,'reasons':[rev.get('reason','Yeterli geçmiş yok')],'strategies':{}}
-        chart=[]
-        for idx,row in df.tail(180).iterrows():
-            try:
-                chart.append({
-                    'date':pd.Timestamp(idx).isoformat(),
-                    'open':float(row['open']),
-                    'high':float(row['high']),
-                    'low':float(row['low']),
-                    'close':float(row['close']),
-                    'volume':float(row['volume']) if 'volume' in row.index and pd.notna(row['volume']) else 0
-                })
-            except Exception:
-                pass
-        return {'symbol':symbol,'source':source,'status':'ANALYZED',**rev,'strategies':strategy_scores(df,rev),'_chart':chart}
+        strategies=strategy_scores(df,rev)
+
+        best_strategy=max(strategies,key=strategies.get)
+        best_score=float(strategies[best_strategy])
+
+        if rev.get('ready'):
+            row={'symbol':symbol,'source':source,'status':'ANALYZED',**rev}
+        else:
+            from .indicators import atr
+            price=float(df.close.iloc[-1])
+            av=float(atr(df,14).iloc[-1])
+            stop=price-max(av*1.8,price*.035)
+            risk=max(price-stop,price*.01)
+            row={
+                'symbol':symbol,
+                'source':source,
+                'status':'SHORT_HISTORY' if len(df)<220 else 'ANALYZED',
+                'ready':False,
+                'state':'NO_SETUP',
+                'price':round(price,4),
+                'confidence':0,
+                'dip_score':0,
+                'turn_score':0,
+                'seller_exhaustion':0,
+                'buyer_awakening':0,
+                'asymmetry':0,
+                'stop':round(stop,4),
+                'target1':round(price+risk*1.8,4),
+                'target2':round(price+risk*3,4),
+                'risk_reward_1':1.8,
+                'risk_reward_2':3.0,
+                'reasons':[]
+            }
+
+        row['strategies']=strategies
+        row['best_strategy']=best_strategy
+        row['best_score']=round(best_score,1)
+
+        if best_score>=65:
+            row['state']='STRATEGY_SETUP'
+            row['opportunity']=True
+            names={
+                'daily':'Günlük momentum',
+                'swing':'Swing yapısı',
+                'trend':'Trend gücü',
+                'mid_term':'Orta vadeli güç',
+                'reversal':'Dipten dönüş'
+            }
+            if best_strategy!='reversal':
+                row['reasons']=[names[best_strategy]]
+        else:
+            row['opportunity']=False
+
+        if not rev.get('ready'):
+            row['confidence']=round(best_score,1)
+
+        return row
+
     except DataUnavailable as e:
         return {'symbol':symbol,'status':'DATA_UNAVAILABLE','error':str(e)}
     except Exception as e:
         return {'symbol':symbol,'status':'PROVIDER_ERROR','error':str(e)}
-
 
 def main():
     DATA.mkdir(exist_ok=True); HISTORY.mkdir(exist_ok=True); CHARTS.mkdir(exist_ok=True)
@@ -83,9 +126,9 @@ def main():
             else: rows.append(r)
             if done==1 or done%10==0 or done==total:
                 print(f'Tarama ilerlemesi: {done}/{total} | analiz {len(rows)} | veri yok {len(unavailable)} | hata {len(provider_errors)}',flush=True)
-    rows.sort(key=lambda x:(x.get('confidence',0),x.get('turn_score',0)),reverse=True)
+    rows.sort(key=lambda x:(x.get('best_score',0),x.get('confidence',0)),reverse=True)
     now=pd.Timestamp.now(tz='Europe/Istanbul')
-    opp=sum(1 for x in rows if x.get('state')!='NO_SETUP')
+    opp=sum(1 for x in rows if x.get('opportunity'))
     payload={
       'generated_at':now.isoformat(),'market':{'score':mscore,'regime':'POZİTİF' if mscore>=65 else 'NÖTR' if mscore>=45 else 'RİSK AZALT'},
       'universe_count':len(symbols),'attempted_count':len(symbols),'scanned_count':len(rows),'data_found_count':len(rows),'short_history_count':sum(1 for x in rows if x.get('status')=='SHORT_HISTORY'),'data_unavailable_count':len(unavailable),'provider_error_count':len(provider_errors),'opportunity_count':opp,'error_count':len(provider_errors),
