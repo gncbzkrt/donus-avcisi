@@ -10,7 +10,7 @@ from .universe import load_universe
 from .performance import build_performance
 
 ROOT=Path(__file__).resolve().parents[1]
-DATA=ROOT/'data'; HISTORY=DATA/'history'
+DATA=ROOT/'data'; HISTORY=DATA/'history'; CHARTS=DATA/'charts'
 MAX_WORKERS=int(os.getenv('RH_WORKERS','2'))
 TIMEOUT=int(os.getenv('RH_TIMEOUT','15'))
 DELAY=float(os.getenv('RH_DELAY','0.45'))
@@ -45,7 +45,20 @@ def scan_one(symbol):
         rev=analyze_reversal(df)
         if not rev['ready']:
             return {'symbol':symbol,'source':source,'ready':False,'state':'NO_SETUP','status':'SHORT_HISTORY','history_bars':int(len(df)),'price':float(df.close.iloc[-1]),'confidence':0,'dip_score':0,'turn_score':0,'reasons':[rev.get('reason','Yeterli geçmiş yok')],'strategies':{}}
-        return {'symbol':symbol,'source':source,'status':'ANALYZED',**rev,'strategies':strategy_scores(df,rev)}
+        chart=[]
+        for idx,row in df.tail(180).iterrows():
+            try:
+                chart.append({
+                    'date':pd.Timestamp(idx).isoformat(),
+                    'open':float(row['open']),
+                    'high':float(row['high']),
+                    'low':float(row['low']),
+                    'close':float(row['close']),
+                    'volume':float(row['volume']) if 'volume' in row.index and pd.notna(row['volume']) else 0
+                })
+            except Exception:
+                pass
+        return {'symbol':symbol,'source':source,'status':'ANALYZED',**rev,'strategies':strategy_scores(df,rev),'_chart':chart}
     except DataUnavailable as e:
         return {'symbol':symbol,'status':'DATA_UNAVAILABLE','error':str(e)}
     except Exception as e:
@@ -53,7 +66,7 @@ def scan_one(symbol):
 
 
 def main():
-    DATA.mkdir(exist_ok=True); HISTORY.mkdir(exist_ok=True)
+    DATA.mkdir(exist_ok=True); HISTORY.mkdir(exist_ok=True); CHARTS.mkdir(exist_ok=True)
     symbols=list(load_universe())
     if LIMIT>0: symbols=symbols[:LIMIT]
     print(f'Veri kaynağı: İş Yatırım | Evren: {len(symbols)} | Paralel: {MAX_WORKERS} | İstek aralığı: {DELAY}s',flush=True)
@@ -81,6 +94,13 @@ def main():
       'unavailable_symbols':[x['symbol'] for x in unavailable],'provider_error_symbols':[x['symbol'] for x in provider_errors]
     }
     (DATA/'latest.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
+    for item in rows:
+        chart=item.pop('_chart',None)
+        if chart:
+            (CHARTS/f"{item['symbol']}.json").write_text(
+                json.dumps({'symbol':item['symbol'],'rows':chart},ensure_ascii=False),
+                encoding='utf-8'
+            )
     (HISTORY/f'{now.strftime("%Y-%m-%d_%H%M%S")}.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     build_performance()
     print(f'Tarama tamamlandı: {len(rows)}/{len(symbols)} veri bulundu | kısa geçmiş: {sum(1 for x in rows if x.get('status')=='SHORT_HISTORY')} | veri yok: {len(unavailable)} | hata: {len(provider_errors)} | fırsat: {opp}',flush=True)
