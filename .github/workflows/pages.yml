@@ -27,10 +27,19 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare site
+        run: |
+          rm -rf site
+          mkdir -p site/data
+          cp -r app/* site/
+          cp -r data/* site/data/
+          sed -i "s#../data/#./data/#g" site/app.js
+          sed -i 's#<small id="version">v2.8</small>#<small id="version">v4.3</small>#' site/index.html
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ./site
 
       - name: Deploy
         id: deployment
