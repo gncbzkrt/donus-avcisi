@@ -123,9 +123,13 @@ def main():
         print(f'KAP güncellemesi alınamadı: {e}')
 
         # Fallback artık mevcut evreni şişirmeyecek.
-        if current_map:
+        if current_map and 700 <= len(current_map) <= 800:
             merged = current_map
-            source = f'mevcut yerel evren ({len(merged)} sembol)'
+            source = f'doğrulanmış yerel evren ({len(merged)} sembol)'
+        else:
+            raise RuntimeError(
+                f'KAP başarısız ve güvenli yerel evren yok: {len(current_map)}'
+            )
         else:
             fb = fetch_fallback()
             merged = dict(fb)
