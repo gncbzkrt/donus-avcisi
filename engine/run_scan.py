@@ -126,13 +126,107 @@ def main():
             else: rows.append(r)
             if done==1 or done%10==0 or done==total:
                 print(f'Tarama ilerlemesi: {done}/{total} | analiz {len(rows)} | veri yok {len(unavailable)} | hata {len(provider_errors)}',flush=True)
-    rows.sort(key=lambda x:(x.get('best_score',0),x.get('confidence',0)),reverse=True)
+    # ============================================================
+    # FINAL OPPORTUNITY FILTER — QUALITY RADAR
+    # Her stratejinin yalnızca EN İYİ 10 adayı fırsat olabilir.
+    # Kısa geçmişli hisseler hiçbir koşulda fırsat değildir.
+    # Aynı hisse birden fazla stratejide yer alabilir.
+    # ============================================================
+    strategy_thresholds={
+        'daily':80,
+        'swing':80,
+        'trend':82,
+        'mid_term':82,
+        'reversal':80
+    }
+
+    selected={}
+    strategy_leaders={}
+    strategy_counts={}
+
+    for strategy,threshold in strategy_thresholds.items():
+        candidates=[
+            x for x in rows
+            if x.get('status')!='SHORT_HISTORY'
+            and float(x.get('strategies',{}).get(strategy,0))>=threshold
+        ]
+
+        candidates.sort(
+            key=lambda x:float(
+                x.get('strategies',{}).get(strategy,0)
+            ),
+            reverse=True
+        )
+
+        leaders=candidates[:10]
+        strategy_leaders[strategy]=leaders
+        strategy_counts[strategy]=len(leaders)
+
+        for x in leaders:
+            symbol=x['symbol']
+            selected.setdefault(symbol,[]).append(strategy)
+
+    names={
+        'daily':'Günlük momentum',
+        'swing':'Swing yapısı',
+        'trend':'Trend gücü',
+        'mid_term':'Orta vadeli güç',
+        'reversal':'Dipten dönüş'
+    }
+
+    for x in rows:
+        symbol=x['symbol']
+        chosen=selected.get(symbol,[])
+
+        if not chosen:
+            x['opportunity']=False
+            x['state']='NO_SETUP'
+            x['confidence']=0
+            x['eligible_strategies']={}
+            continue
+
+        eligible={
+            st:float(x.get('strategies',{}).get(st,0))
+            for st in chosen
+        }
+
+        best=max(eligible,key=eligible.get)
+
+        x['opportunity']=True
+        x['state']='STRATEGY_SETUP'
+        x['eligible_strategies']=eligible
+        x['best_strategy']=best
+        x['best_score']=round(float(eligible[best]),1)
+        x['confidence']=round(float(eligible[best]),1)
+
+        x['reasons']=[
+            f"En uygun: {names[best]}"
+        ]
+
+        if len(chosen)>1:
+            x['reasons'].append(
+                'Çoklu strateji teyidi'
+            )
+
+    rows.sort(
+        key=lambda x:(
+            x.get('opportunity',False),
+            x.get('best_score',0),
+            x.get('confidence',0)
+        ),
+        reverse=True
+    )
+
     now=pd.Timestamp.now(tz='Europe/Istanbul')
     opp=sum(1 for x in rows if x.get('opportunity'))
+
     payload={
       'generated_at':now.isoformat(),'market':{'score':mscore,'regime':'POZİTİF' if mscore>=65 else 'NÖTR' if mscore>=45 else 'RİSK AZALT'},
       'universe_count':len(symbols),'attempted_count':len(symbols),'scanned_count':len(rows),'data_found_count':len(rows),'short_history_count':sum(1 for x in rows if x.get('status')=='SHORT_HISTORY'),'data_unavailable_count':len(unavailable),'provider_error_count':len(provider_errors),'opportunity_count':opp,'error_count':len(provider_errors),
-      'rows':rows,'leaders':[x for x in rows if x.get('state')!='NO_SETUP'][:80],
+      'rows':rows,
+      'leaders':[x for x in rows if x.get('opportunity')][:50],
+      'strategy_counts':strategy_counts,
+      'strategy_leaders':strategy_leaders,
       'method':'DÖNÜŞ AVCISI v3.3','data_source':'TradingView WebSocket → İş Yatırım fallback','data_note':'Ana tarama kaynağı TradingView WebSocket günlük verisidir; bulunamazsa İş Yatırım tarihsel günlük verisine düşülür. TradingView ücretsiz/kimliksiz erişimde gecikmeli olabilir; sinyaller yatırım tavsiyesi değildir.',
       'unavailable_symbols':[x['symbol'] for x in unavailable],'provider_error_symbols':[x['symbol'] for x in provider_errors]
     }
