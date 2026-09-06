@@ -52,7 +52,7 @@ function bindStars(){document.querySelectorAll('[data-fav]').forEach(b=>b.onclic
 function fmtTech(v){return v==null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString('tr-TR',{maximumFractionDigits:2})}
 function renderLocalChart(symbol){
   const svg=$('#stockChart'); if(!svg)return;
-  fetch(`../data/charts/${encodeURIComponent(symbol)}.json?ts=${Date.now()}`,{cache:'no-store'})
+  fetch(`./data/charts/${encodeURIComponent(symbol)}.json?ts=${Date.now()}`,{cache:'no-store'})
     .then(r=>{
       if(!r.ok) throw Error('Static chart yok');
       return r.json();
@@ -154,7 +154,7 @@ function renderAll(){updateMeta();
 }
 async function load(showToast=false){
   const btn=$('#refresh');btn.disabled=true;btn.classList.add('spin');
-  try{const [a,b]=await Promise.all([fetch('../data/latest.json?ts='+Date.now(),{cache:'no-store'}),fetch('../data/performance.json?ts='+Date.now(),{cache:'no-store'})]);if(!a.ok)throw Error('Veri yok');DATA=await a.json();PERF=b.ok?await b.json():null;renderAll();if(showToast)toast('Veriler yenilendi')}catch(e){console.error(e);if(!DATA)$('#homeCards').innerHTML='<div class="empty">Veri bulunamadı. Önce taramayı çalıştır.</div>';if(showToast)toast('Veriler alınamadı')}finally{btn.disabled=false;btn.classList.remove('spin')}}
+  try{const [a,b]=await Promise.all([fetch('./data/latest.json?ts='+Date.now(),{cache:'no-store'}),fetch('./data/performance.json?ts='+Date.now(),{cache:'no-store'})]);if(!a.ok)throw Error('Veri yok');DATA=await a.json();PERF=b.ok?await b.json():null;renderAll();if(showToast)toast('Veriler yenilendi')}catch(e){console.error(e);if(!DATA)$('#homeCards').innerHTML='<div class="empty">Veri bulunamadı. Önce taramayı çalıştır.</div>';if(showToast)toast('Veriler alınamadı')}finally{btn.disabled=false;btn.classList.remove('spin')}}
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.bottom button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='favorites')renderFavorites();if(id==='performance')renderPerformance()}
 document.querySelectorAll('.bottom button').forEach(b=>b.onclick=()=>showPage(b.dataset.page));document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>showPage(b.dataset.go));document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');mode=b.dataset.mode;renderOpportunities()});$('#refresh').onclick=async()=>{try{const r=await fetch('../api/scan',{method:'POST'});if(r.ok){toast('Yeni tarama başlatıldı…');setTimeout(()=>load(true),900);return}}catch(e){} load(true)};
 $('#exportFav').onclick=()=>{const payload={version:VERSION,exportedAt:new Date().toISOString(),favoriler:getFavs(),gozlemler:getObs()};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='donus-avcisi-favoriler-yedek.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
