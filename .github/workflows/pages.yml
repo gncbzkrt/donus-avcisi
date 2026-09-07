@@ -32,9 +32,10 @@ jobs:
           rm -rf site
           mkdir -p site/data
           cp -r app/* site/
+          rm -f site/sw.js
           cp -r data/* site/data/
           sed -i "s#../data/#./data/#g" site/app.js
-          sed -i 's#<small id="version">v2.8</small>#<small id="version">v4.3</small>#' site/index.html
+          sed -i 's#<small id="version">v2.8</small>#<small id="version">v4.4</small>#' site/index.html
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
