@@ -1,4 +1,4 @@
-const VERSION='v4.2';
+const VERSION='v4.4';
 let DATA=null, PERF=null, mode='all';
 const favKey='donus_avcisi_favoriler_v26';
 const obsKey='donus_avcisi_gozlemler_v26';
