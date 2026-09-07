@@ -1,4 +1,4 @@
-const VERSION='v4.4';
+const VERSION='v4.5';
 let DATA=null, PERF=null, mode='all';
 const favKey='donus_avcisi_favoriler_v26';
 const obsKey='donus_avcisi_gozlemler_v26';
@@ -21,6 +21,29 @@ function stateLabel(x){return ({CONFIRMED_REVERSAL:'DÖNÜŞ TEYİTLİ',EARLY_RE
 function strategyLabel(x){return ({daily:'Günlük',swing:'Swing',trend:'Trend',mid_term:'Orta Vade',reversal:'Dipten Dönüş'})[x]||x}
 function score(x){return mode==='all'?Number(x.confidence||0):Number(x.strategies?.[mode]||0)}
 function isFav(s){return !!getFavs()[s]}
+function strategyWhy(x){
+  const k=x.best_strategy||mode;
+  const s=x.strategies||{}, e=x.eligible_strategies||{};
+  const score=Number(s[k]||0);
+  const labels={daily:'Günlük',swing:'Swing',trend:'Trend',mid_term:'Orta Vade',reversal:'Dipten Dönüş'};
+  const parts=[];
+  parts.push(`${labels[k]||k} skoru ${score.toFixed(1)}`);
+  if(k==='reversal'){
+    if(x.dip_score!=null)parts.push(`Dip ${Number(x.dip_score).toFixed(0)}`);
+    if(x.turn_score!=null)parts.push(`Dönüş ${Number(x.turn_score).toFixed(0)}`);
+    if(x.seller_exhaustion!=null)parts.push(`Satıcı tükenmesi ${Number(x.seller_exhaustion).toFixed(0)}`);
+    if(x.buyer_awakening!=null)parts.push(`Alıcı uyanışı ${Number(x.buyer_awakening).toFixed(0)}`);
+  }else if(Object.keys(e).length>1){
+    const others=Object.entries(e).filter(([key])=>key!==k).sort((a,b)=>b[1]-a[1]).slice(0,2);
+    if(others.length)parts.push(`${others.map(([key,val])=>`${labels[key]||key} ${Number(val).toFixed(1)}`).join(' · ')}`);
+    parts.push('Çoklu strateji teyidi');
+  }else{
+    const ranked=Object.entries(s).filter(([key])=>key!==k).sort((a,b)=>b[1]-a[1]).slice(0,1);
+    if(ranked.length)parts.push(`En yakın alternatif: ${labels[ranked[0][0]]||ranked[0][0]} ${Number(ranked[0][1]).toFixed(1)}`);
+  }
+  return parts.join(' · ');
+}
+
 function observeFavorites(){
   if(!DATA)return;
   const f=getFavs(),o=getObs(),ts=DATA.generated_at||new Date().toISOString(),day=String(ts).slice(0,10);
@@ -46,7 +69,7 @@ function card(x,rank,withFav=true){
   const fav=isFav(x.symbol),f=getFavs()[x.symbol];
   const gain=f&&f.entryPrice?((Number(x.price)/f.entryPrice-1)*100):null;
   const status=f?favStatus(f,x):null;
-  return `<article class="card stock-card ${fav?'is-fav':''}" data-stock="${x.symbol}"><div class="rank">${String(rank).padStart(2,'0')}</div><div class="main"><div class="top"><div><b>${x.symbol}</b><span class="state">${stateLabel(x.state)}</span></div>${withFav?starButton(x.symbol):''}</div><div class="scores">${[['SKOR',score(x)],['DİP',x.dip_score],['DÖNÜŞ',x.turn_score],['GÜVEN',x.confidence]].map(z=>`<div><small>${z[0]}</small><strong>${Number(z[1]||0).toFixed(0)}</strong></div>`).join('')}</div><div class="reason"><b>En uygun: ${strategyLabel(x.best_strategy||mode)}</b> · ${(x.reasons||[]).join(' · ')||'Strateji kriterleri karşılanıyor.'}</div><div class="plan"><span>Fiyat <b>${money(x.price)}</b></span><span>Stop <b>${money(x.stop)}</b></span><span>H1 <b>${money(x.target1)}</b></span><span>H2 <b>${money(x.target2)}</b></span><span>R/R <b>${x.risk_reward_1||'—'}</b></span></div><div class="card-actions">${liveLink(x.symbol)}${withFav?starButton(x.symbol):''}</div>${f?`<div class="favline">Favori sonrası <b class="${gain>=0?'up':'down'}">${pct(gain)}</b> · ${status}</div>`:''}</div></article>`
+  return `<article class="card stock-card ${fav?'is-fav':''}" data-stock="${x.symbol}"><div class="rank">${String(rank).padStart(2,'0')}</div><div class="main"><div class="top"><div><b>${x.symbol}</b><span class="state">${stateLabel(x.state)}</span></div>${withFav?starButton(x.symbol):''}</div><div class="scores">${[['SKOR',score(x)],['DİP',x.dip_score],['DÖNÜŞ',x.turn_score],['GÜVEN',x.confidence]].map(z=>`<div><small>${z[0]}</small><strong>${Number(z[1]||0).toFixed(0)}</strong></div>`).join('')}</div><div class="reason"><b>En uygun: ${strategyLabel(x.best_strategy||mode)}</b><br><span class="strategy-why"><b>Neden bu kategori?</b> ${strategyWhy(x)}</span><br>${(x.reasons||[]).join(' · ')||'Strateji kriterleri karşılanıyor.'}</div><div class="plan"><span>Fiyat <b>${money(x.price)}</b></span><span>Stop <b>${money(x.stop)}</b></span><span>H1 <b>${money(x.target1)}</b></span><span>H2 <b>${money(x.target2)}</b></span><span>R/R <b>${x.risk_reward_1||'—'}</b></span></div><div class="card-actions">${liveLink(x.symbol)}</div>${f?`<div class="favline">Favori sonrası <b class="${gain>=0?'up':'down'}">${pct(gain)}</b> · ${status}</div>`:''}</div></article>`
 }
 function bindStars(){document.querySelectorAll('[data-fav]').forEach(b=>b.onclick=e=>{e.stopPropagation();const x=DATA?.rows?.find(a=>a.symbol===b.dataset.fav);if(x)toggleFav(x)});document.querySelectorAll('.live-link').forEach(a=>a.onclick=e=>e.stopPropagation());bindCards()}
 function fmtTech(v){return v==null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString('tr-TR',{maximumFractionDigits:2})}

@@ -101,6 +101,25 @@ def scan_one(symbol):
         if not rev.get('ready'):
             row['confidence']=round(best_score,1)
 
+        # Fırsat adayları için son 260 günlük OHLCV verisini static grafik dosyasına hazırla.
+        # Grafik frontend tarafından EMA/RSI/MACD ile çizilir; TradingView bağımlılığı yoktur.
+        if best_score >= 65:
+            chart=[]
+            for idx, bar in df.tail(260).iterrows():
+                try:
+                    chart.append({
+                        'date':pd.Timestamp(idx).strftime('%Y-%m-%d'),
+                        'open':float(bar['open']),
+                        'high':float(bar['high']),
+                        'low':float(bar['low']),
+                        'close':float(bar['close']),
+                        'volume':float(bar['volume']) if pd.notna(bar['volume']) else 0
+                    })
+                except Exception:
+                    pass
+            if len(chart)>=2:
+                row['_chart']=chart
+
         return row
 
     except DataUnavailable as e:
@@ -240,6 +259,13 @@ def main():
     now=pd.Timestamp.now(tz='Europe/Istanbul')
     opp=sum(1 for x in rows if x.get('opportunity'))
 
+    # Static grafik verisini latest.json'dan ayrı tut.
+    chart_payloads={}
+    for item in rows:
+        chart=item.pop('_chart',None)
+        if chart:
+            chart_payloads[item['symbol']]=chart
+
     payload={
       'generated_at':now.isoformat(),'market':{'score':mscore,'regime':'POZİTİF' if mscore>=65 else 'NÖTR' if mscore>=45 else 'RİSK AZALT'},
       'universe_count':len(symbols),'attempted_count':len(symbols),'scanned_count':len(rows),'data_found_count':len(rows),'short_history_count':sum(1 for x in rows if x.get('status')=='SHORT_HISTORY'),'data_unavailable_count':len(unavailable),'provider_error_count':len(provider_errors),'opportunity_count':opp,'error_count':len(provider_errors),
@@ -255,13 +281,24 @@ def main():
         json.dumps(payload,ensure_ascii=False,indent=2,allow_nan=False),
         encoding='utf-8'
     )
-    for item in rows:
-        chart=item.pop('_chart',None)
-        if chart:
-            (CHARTS/f"{item['symbol']}.json").write_text(
-                json.dumps({'symbol':item['symbol'],'rows':chart},ensure_ascii=False),
-                encoding='utf-8'
-            )
+    # Önceki taramadan kalan grafik dosyalarını temizle.
+    CHARTS.mkdir(parents=True, exist_ok=True)
+    for old_chart in CHARTS.glob('*.json'):
+        try:
+            old_chart.unlink()
+        except Exception:
+            pass
+
+    for symbol,chart in chart_payloads.items():
+        (CHARTS/f"{symbol}.json").write_text(
+            json.dumps({
+                'ok':True,
+                'symbol':symbol,
+                'source':'Dönüş Avcısı static OHLCV',
+                'rows':chart
+            },ensure_ascii=False),
+            encoding='utf-8'
+        )
     (HISTORY/f'{now.strftime("%Y-%m-%d_%H%M%S")}.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     build_performance()
     print(f'Tarama tamamlandı: {len(rows)}/{len(symbols)} veri bulundu | kısa geçmiş: {sum(1 for x in rows if x.get('status')=='SHORT_HISTORY')} | veri yok: {len(unavailable)} | hata: {len(provider_errors)} | fırsat: {opp}',flush=True)
