@@ -54,5 +54,17 @@
 </section>
 </main>
 <nav class="bottom"><button class="active" data-page="home">⌂<span>Ana Sayfa</span></button><button data-page="opportunities">⌁<span>Fırsatlar</span></button><button data-page="favorites">★<span>Favoriler</span></button><button data-page="performance">◔<span>Performans</span></button><button data-page="settings">⚙<span>Ayarlar</span></button></nav>
-<div id="toast"></div><script src="app.js"></script><script>if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");</script>
+<div id="toast"></div><script src="app.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.getRegistrations().then(rs =>
+    Promise.all(rs.map(r => r.unregister()))
+  );
+  if (window.caches) {
+    caches.keys().then(keys =>
+      Promise.all(keys.map(k => caches.delete(k)))
+    );
+  }
+}
+</script>
 </body></html>
