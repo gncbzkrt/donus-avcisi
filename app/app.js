@@ -153,8 +153,37 @@ function renderAll(){updateMeta();
   $('#version').textContent=VERSION;$('#marketScore').textContent=Number(DATA.market?.score||0).toFixed(1);$('#regime').textContent=DATA.market?.regime||'—';$('#updated').textContent=DATA.generated_at?new Date(DATA.generated_at).toLocaleString('tr-TR'):'—';$('#scanCount').textContent=DATA.scanned_count||0;$('#opportunityCount').textContent=DATA.opportunity_count??DATA.rows.filter(x=>Number(x.best_score||0)>=65).length;$('#favoriteCount').textContent=Object.keys(getFavs()).length;$('#universeInfo').textContent=`${DATA.universe_count||0} BIST şirketi hedef evrende · ${DATA.attempted_count||DATA.universe_count||0} denendi · ${DATA.scanned_count||0} veri bulundu · ${DATA.short_history_count||0} kısa geçmiş · ${DATA.data_unavailable_count||0} veri yok · ${DATA.provider_error_count||0} hata`;$('#dataNote').textContent=DATA.data_note||'Günlük veri';renderHome();renderOpportunities();renderFavorites();renderPerformance();
 }
 async function load(showToast=false){
-  const btn=$('#refresh');btn.disabled=true;btn.classList.add('spin');
-  try{const [a,b]=await Promise.all([fetch('./data/latest.json?ts='+Date.now(),{cache:'no-store'}),fetch('./data/performance.json?ts='+Date.now(),{cache:'no-store'})]);if(!a.ok)throw Error('Veri yok');DATA=await a.json();PERF=b.ok?await b.json():null;renderAll();if(showToast)toast('Veriler yenilendi')}catch(e){console.error(e);if(!DATA)$('#homeCards').innerHTML='<div class="empty">Veri bulunamadı. Önce taramayı çalıştır.</div>';if(showToast)toast('Veriler alınamadı')}finally{btn.disabled=false;btn.classList.remove('spin')}}
+  const btn=$('#refresh');
+  btn.disabled=true;
+  btn.classList.add('spin');
+
+  try{
+    const a=await fetch('./data/latest.json?ts='+Date.now(),{cache:'no-store'});
+    if(!a.ok) throw Error('Ana veri alınamadı: HTTP '+a.status);
+
+    DATA=await a.json();
+
+    try{
+      const b=await fetch('./data/performance.json?ts='+Date.now(),{cache:'no-store'});
+      PERF=b.ok?await b.json():null;
+    }catch(perfErr){
+      console.warn('Performance verisi alınamadı:',perfErr);
+      PERF=null;
+    }
+
+    renderAll();
+    if(showToast)toast('Veriler yenilendi');
+  }catch(e){
+    console.error('Dönüş Avcısı veri yükleme hatası:',e);
+    if(!DATA){
+      $('#homeCards').innerHTML='<div class="empty">Veri yüklenemedi: '+String(e.message||e)+'</div>';
+    }
+    if(showToast)toast('Veriler alınamadı');
+  }finally{
+    btn.disabled=false;
+    btn.classList.remove('spin');
+  }
+}
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.bottom button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='favorites')renderFavorites();if(id==='performance')renderPerformance()}
 document.querySelectorAll('.bottom button').forEach(b=>b.onclick=()=>showPage(b.dataset.page));document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>showPage(b.dataset.go));document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');mode=b.dataset.mode;renderOpportunities()});$('#refresh').onclick=async()=>{try{const r=await fetch('../api/scan',{method:'POST'});if(r.ok){toast('Yeni tarama başlatıldı…');setTimeout(()=>load(true),900);return}}catch(e){} load(true)};
 $('#exportFav').onclick=()=>{const payload={version:VERSION,exportedAt:new Date().toISOString(),favoriler:getFavs(),gozlemler:getObs()};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='donus-avcisi-favoriler-yedek.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
