@@ -108,6 +108,26 @@ def scan_one(symbol):
     except Exception as e:
         return {'symbol':symbol,'status':'PROVIDER_ERROR','error':str(e)}
 
+def json_safe(value):
+    """JSON uyumlu hale getirir; NaN/Infinity -> None."""
+    import math
+
+    if isinstance(value, dict):
+        return {k: json_safe(v) for k, v in value.items()}
+
+    if isinstance(value, (list, tuple)):
+        return [json_safe(v) for v in value]
+
+    # Python float ve NumPy float tiplerini güvenli şekilde ele al
+    if isinstance(value, float) or type(value).__name__ in ("float16", "float32", "float64"):
+        try:
+            return None if not math.isfinite(float(value)) else float(value)
+        except (TypeError, ValueError):
+            return None
+
+    return value
+
+
 def main():
     DATA.mkdir(exist_ok=True); HISTORY.mkdir(exist_ok=True); CHARTS.mkdir(exist_ok=True)
     symbols=list(load_universe())
@@ -230,7 +250,11 @@ def main():
       'method':'DÖNÜŞ AVCISI v3.3','data_source':'TradingView WebSocket → İş Yatırım fallback','data_note':'Ana tarama kaynağı TradingView WebSocket günlük verisidir; bulunamazsa İş Yatırım tarihsel günlük verisine düşülür. TradingView ücretsiz/kimliksiz erişimde gecikmeli olabilir; sinyaller yatırım tavsiyesi değildir.',
       'unavailable_symbols':[x['symbol'] for x in unavailable],'provider_error_symbols':[x['symbol'] for x in provider_errors]
     }
-    (DATA/'latest.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
+    payload = json_safe(payload)
+    (DATA/'latest.json').write_text(
+        json.dumps(payload,ensure_ascii=False,indent=2,allow_nan=False),
+        encoding='utf-8'
+    )
     for item in rows:
         chart=item.pop('_chart',None)
         if chart:
