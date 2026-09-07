@@ -147,6 +147,80 @@ def json_safe(value):
     return value
 
 
+def strategy_gate(x,strategy):
+    """Skor yeterli olsa bile stratejinin gerçek işlem yapısına uymuyorsa reddet."""
+    t=x.get('technicals') or {}
+
+    try:
+        price=float(x.get('price',0))
+        e20=float(t.get('ema20',0))
+        e50=float(t.get('ema50',0))
+        e200=float(t.get('ema200',0))
+        rsi=float(t.get('rsi14',50))
+        vr=float(t.get('volume_ratio20',0))
+    except (TypeError,ValueError):
+        return False
+
+    if min(price,e20,e50,e200) <= 0:
+        return False
+
+    # Günlük:
+    # Momentum var ama fiyat çok uzamışsa peşinden koşma.
+    if strategy=='daily':
+        return (
+            rsi <= 74
+            and price >= e20*0.97
+            and price <= e20*1.10
+            and vr >= 0.75
+        )
+
+    # Swing:
+    # Orta trend korunacak, fiyat EMA20 çevresinde olacak,
+    # aşırı RSI ve zayıf hacim kabul edilmeyecek.
+    if strategy=='swing':
+        return (
+            price >= e50
+            and e20 >= e50
+            and 45 <= rsi <= 72
+            and price <= e20*1.10
+            and vr >= 0.80
+        )
+
+    # Trend:
+    # Gerçek trend + makul giriş. Aşırı uzamış trendi alma.
+    if strategy=='trend':
+        return (
+            price > e20 > e50 > e200
+            and rsi <= 78
+            and price <= e20*1.15
+        )
+
+    # Orta Vade:
+    # Ana trend pozitif ama giriş tamamen kopmuş olmamalı.
+    if strategy=='mid_term':
+        return (
+            price > e200
+            and e50 > e200
+            and rsi <= 76
+            and price <= e50*1.20
+        )
+
+    # Dipten Dönüş:
+    # Sadece dönüş puanı yetmez. Gerçek dip baskısı + teyit aranır.
+    if strategy=='reversal':
+        return (
+            bool(x.get('ready'))
+            and float(x.get('dip_score',0)) >= 65
+            and (
+                bool(x.get('failed_breakdown'))
+                or float(x.get('dip_pressure',0)) >= 70
+            )
+            and price <= e20*1.10
+            and rsi <= 75
+        )
+
+    return False
+
 def main():
     DATA.mkdir(exist_ok=True); HISTORY.mkdir(exist_ok=True); CHARTS.mkdir(exist_ok=True)
     symbols=list(load_universe())
@@ -188,6 +262,7 @@ def main():
             x for x in rows
             if x.get('status')!='SHORT_HISTORY'
             and float(x.get('strategies',{}).get(strategy,0))>=threshold
+            and strategy_gate(x,strategy)
         ]
 
         candidates.sort(
@@ -273,7 +348,7 @@ def main():
       'leaders':[x for x in rows if x.get('opportunity')][:50],
       'strategy_counts':strategy_counts,
       'strategy_leaders':strategy_leaders,
-      'method':'DÖNÜŞ AVCISI v3.3','data_source':'TradingView WebSocket → İş Yatırım fallback','data_note':'Ana tarama kaynağı TradingView WebSocket günlük verisidir; bulunamazsa İş Yatırım tarihsel günlük verisine düşülür. TradingView ücretsiz/kimliksiz erişimde gecikmeli olabilir; sinyaller yatırım tavsiyesi değildir.',
+      'method':'DÖNÜŞ AVCISI v4.6','data_source':'TradingView WebSocket → İş Yatırım fallback','data_note':'Ana tarama kaynağı TradingView WebSocket günlük verisidir; bulunamazsa İş Yatırım tarihsel günlük verisine düşülür. TradingView ücretsiz/kimliksiz erişimde gecikmeli olabilir; sinyaller yatırım tavsiyesi değildir.',
       'unavailable_symbols':[x['symbol'] for x in unavailable],'provider_error_symbols':[x['symbol'] for x in provider_errors]
     }
     payload = json_safe(payload)

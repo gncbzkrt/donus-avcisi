@@ -1,4 +1,4 @@
-const VERSION='v4.5';
+const VERSION='v4.6';
 let DATA=null, PERF=null, mode='all';
 const favKey='donus_avcisi_favoriler_v26';
 const obsKey='donus_avcisi_gozlemler_v26';
@@ -19,10 +19,18 @@ const pct=x=>(x==null||Number.isNaN(Number(x))?'—':`${Number(x)>=0?'+':''}${Nu
 function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>e.classList.remove('show'),1900)}
 function stateLabel(x){return ({CONFIRMED_REVERSAL:'DÖNÜŞ TEYİTLİ',EARLY_REVERSAL:'ERKEN DÖNÜŞ',BASE_FORMING:'DİP OLUŞUYOR',STRATEGY_SETUP:'STRATEJİ FIRSATI',NO_SETUP:'İZLE'})[x]||'İZLE'}
 function strategyLabel(x){return ({daily:'Günlük',swing:'Swing',trend:'Trend',mid_term:'Orta Vade',reversal:'Dipten Dönüş'})[x]||x}
-function score(x){return mode==='all'?Number(x.confidence||0):Number(x.strategies?.[mode]||0)}
+function isEligible(x){
+  if(mode==='all') return !!x.opportunity;
+  return Object.prototype.hasOwnProperty.call(x.eligible_strategies||{},mode);
+}
+function score(x){
+  return mode==='all'
+    ? Number(x.best_score||0)
+    : Number(x.eligible_strategies?.[mode]||0);
+}
 function isFav(s){return !!getFavs()[s]}
 function strategyWhy(x){
-  const k=x.best_strategy||mode;
+  const k=mode==='all'?(x.best_strategy||mode):mode;
   const s=x.strategies||{}, e=x.eligible_strategies||{};
   const score=Number(s[k]||0);
   const labels={daily:'Günlük',swing:'Swing',trend:'Trend',mid_term:'Orta Vade',reversal:'Dipten Dönüş'};
@@ -69,7 +77,7 @@ function card(x,rank,withFav=true){
   const fav=isFav(x.symbol),f=getFavs()[x.symbol];
   const gain=f&&f.entryPrice?((Number(x.price)/f.entryPrice-1)*100):null;
   const status=f?favStatus(f,x):null;
-  return `<article class="card stock-card ${fav?'is-fav':''}" data-stock="${x.symbol}"><div class="rank">${String(rank).padStart(2,'0')}</div><div class="main"><div class="top"><div><b>${x.symbol}</b><span class="state">${stateLabel(x.state)}</span></div>${withFav?starButton(x.symbol):''}</div><div class="scores">${[['SKOR',score(x)],['DİP',x.dip_score],['DÖNÜŞ',x.turn_score],['GÜVEN',x.confidence]].map(z=>`<div><small>${z[0]}</small><strong>${Number(z[1]||0).toFixed(0)}</strong></div>`).join('')}</div><div class="reason"><b>En uygun: ${strategyLabel(x.best_strategy||mode)}</b><br><span class="strategy-why"><b>Neden bu kategori?</b> ${strategyWhy(x)}</span><br>${(x.reasons||[]).join(' · ')||'Strateji kriterleri karşılanıyor.'}</div><div class="plan"><span>Fiyat <b>${money(x.price)}</b></span><span>Stop <b>${money(x.stop)}</b></span><span>H1 <b>${money(x.target1)}</b></span><span>H2 <b>${money(x.target2)}</b></span><span>R/R <b>${x.risk_reward_1||'—'}</b></span></div><div class="card-actions">${liveLink(x.symbol)}</div>${f?`<div class="favline">Favori sonrası <b class="${gain>=0?'up':'down'}">${pct(gain)}</b> · ${status}</div>`:''}</div></article>`
+  return `<article class="card stock-card ${fav?'is-fav':''}" data-stock="${x.symbol}"><div class="rank">${String(rank).padStart(2,'0')}</div><div class="main"><div class="top"><div><b>${x.symbol}</b><span class="state">${stateLabel(x.state)}</span></div>${withFav?starButton(x.symbol):''}</div><div class="scores">${[['SKOR',score(x)],['DİP',x.dip_score],['DÖNÜŞ',x.turn_score],['GÜVEN',x.confidence]].map(z=>`<div><small>${z[0]}</small><strong>${Number(z[1]||0).toFixed(0)}</strong></div>`).join('')}</div><div class="reason"><b>${mode==='all'?'En uygun':'Bu sekmede uygun'}: ${strategyLabel(mode==='all'?(x.best_strategy||'—'):mode)}</b><br><span class="strategy-why"><b>Neden bu kategori?</b> ${strategyWhy(x)}</span><br>${(x.reasons||[]).join(' · ')||'Strateji kriterleri karşılanıyor.'}</div><div class="plan"><span>Fiyat <b>${money(x.price)}</b></span><span>Stop <b>${money(x.stop)}</b></span><span>H1 <b>${money(x.target1)}</b></span><span>H2 <b>${money(x.target2)}</b></span><span>R/R <b>${x.risk_reward_1||'—'}</b></span></div><div class="card-actions">${liveLink(x.symbol)}</div>${f?`<div class="favline">Favori sonrası <b class="${gain>=0?'up':'down'}">${pct(gain)}</b> · ${status}</div>`:''}</div></article>`
 }
 function bindStars(){document.querySelectorAll('[data-fav]').forEach(b=>b.onclick=e=>{e.stopPropagation();const x=DATA?.rows?.find(a=>a.symbol===b.dataset.fav);if(x)toggleFav(x)});document.querySelectorAll('.live-link').forEach(a=>a.onclick=e=>e.stopPropagation());bindCards()}
 function fmtTech(v){return v==null||Number.isNaN(Number(v))?'—':Number(v).toLocaleString('tr-TR',{maximumFractionDigits:2})}
@@ -145,8 +153,12 @@ function detailPage(x){
 }
 function bindCards(){document.querySelectorAll('[data-stock]').forEach(b=>b.onclick=()=>{const x=DATA?.rows?.find(a=>a.symbol===b.dataset.stock);if(x)detailPage(x)})}
 function updateMeta(){if(!DATA)return;const u=$('#universeCount');if(u)u.textContent=DATA.universe_count??'—';const sc=$('#scanCount');if(sc)sc.textContent=DATA.data_found_count??DATA.scanned_count??'—';const op=$('#opportunityCount');if(op)op.textContent=DATA.opportunity_count??'—';const fav=$('#favoriteCount');if(fav)fav.textContent=Object.keys(getFavs()).length;const note=$('#scanNote');if(note)note.textContent=`${DATA.universe_count??'—'} evren · ${DATA.data_found_count??DATA.scanned_count??'—'} veri · ${DATA.data_unavailable_count??0} veri yok · ${DATA.provider_error_count??0} hata`;const un=$('#universeInfo');if(un)un.textContent=`${DATA.universe_count??'—'} şirket · kaynak: KAP · veri: İş Yatırım`;const dn=$('#dataNote');if(dn)dn.textContent=DATA.data_source||'İş Yatırım günlük tarihsel veri';}
-function renderHome(){const arr=[...DATA.rows].filter(x=>!x.error&&Number(x.best_score||0)>=65).sort((a,b)=>Number(b.best_score||0)-Number(a.best_score||0)).slice(0,6);$('#homeCards').innerHTML=arr.length?arr.map((x,i)=>card(x,i+1)).join(''):'<div class="empty">Uygun fırsat bulunamadı.</div>';bindStars()}
-function renderOpportunities(){const arr=[...DATA.rows].filter(x=>!x.error&&Number(score(x))>=65).sort((a,b)=>score(b)-score(a)).slice(0,80);$('#cards').innerHTML=arr.length?arr.map((x,i)=>card(x,i+1)).join(''):'<div class="empty">Uygun fırsat bulunamadı.</div>';bindStars()}
+function renderHome(){const arr=[...DATA.rows].filter(x=>!x.error&&x.opportunity).sort((a,b)=>Number(b.best_score||0)-Number(a.best_score||0)).slice(0,6);$('#homeCards').innerHTML=arr.length?arr.map((x,i)=>card(x,i+1)).join(''):'<div class="empty">Uygun fırsat bulunamadı.</div>';bindStars()}
+function renderOpportunities(){
+  const arr=[...DATA.rows]
+    .filter(x=>!x.error&&isEligible(x))
+    .sort((a,b)=>score(b)-score(a))
+    .slice(0,80);$('#cards').innerHTML=arr.length?arr.map((x,i)=>card(x,i+1)).join(''):'<div class="empty">Uygun fırsat bulunamadı.</div>';bindStars()}
 function favStatus(f,x){const p=Number(x.price),s=Number(f.entryStop||0),t1=Number(f.entryTarget1||0),t2=Number(f.entryTarget2||0);if(s&&p<=s)return 'STOP SEVİYESİNE GELDİ';if(t2&&p>=t2)return 'H2 HEDEFİNE ULAŞTI';if(t1&&p>=t1)return 'H1 HEDEFİNE ULAŞTI';return 'TAKİPTE'}
 function renderFavorites(){
   const f=getFavs(),o=getObs(),arr=Object.values(f),stats=$('#favStats');

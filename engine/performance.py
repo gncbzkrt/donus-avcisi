@@ -67,8 +67,9 @@ def build_performance():
             if j>=len(snaps): break
             future={x.get('symbol'):x for x in (snaps[j].get('rows') or snaps[j].get('leaders',[]))}
             for x in (snap.get('rows') or snap.get('leaders',[])):
-                score=float(x.get('strategies',{}).get(strategy,0))
-                if score<65: continue
+                eligible=x.get('eligible_strategies') or {}
+                if strategy not in eligible:
+                    continue
                 cur=future.get(x.get('symbol'))
                 if cur and x.get('price') and cur.get('price'):
                     vals.append((float(cur['price'])/float(x['price'])-1)*100)
