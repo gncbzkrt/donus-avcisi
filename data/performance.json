@@ -1,22 +1,22 @@
 {
-  "guncellendi": "2026-09-15T08:44:49.615256+03:00",
-  "evren_gun_sayisi": 7,
+  "guncellendi": "2026-09-16T08:41:53.869495+03:00",
+  "evren_gun_sayisi": 8,
   "ufuklar": {
     "1G": {
-      "adet": 140,
-      "basari": 45.0,
-      "ortalama": 0.04,
+      "adet": 163,
+      "basari": 41.7,
+      "ortalama": -0.35,
       "medyan": 0.0,
       "en_iyi": 10.0,
-      "en_kotu": -9.96
+      "en_kotu": -9.98
     },
     "5G": {
-      "adet": 40,
-      "basari": 52.5,
-      "ortalama": -0.36,
-      "medyan": 2.56,
+      "adet": 65,
+      "basari": 46.2,
+      "ortalama": -1.66,
+      "medyan": -0.29,
       "en_iyi": 16.3,
-      "en_kotu": -15.73
+      "en_kotu": -18.48
     },
     "20G": {
       "adet": 0,
@@ -37,12 +37,12 @@
   },
   "stratejiler": {
     "daily": {
-      "adet": 30,
-      "basari": 43.3,
-      "ortalama": -0.18,
-      "medyan": 0.0,
+      "adet": 37,
+      "basari": 40.5,
+      "ortalama": -0.9,
+      "medyan": -1.38,
       "en_iyi": 10.0,
-      "en_kotu": -9.43
+      "en_kotu": -9.98
     },
     "swing": {
       "adet": 0,
