@@ -464,10 +464,6 @@
     "name": "BINBN"
   },
   {
-    "symbol": "BINHO",
-    "name": "BINHO"
-  },
-  {
     "symbol": "BIOEN",
     "name": "BIOEN"
   },
@@ -2062,6 +2058,10 @@
   {
     "symbol": "NETCD",
     "name": "NETCD"
+  },
+  {
+    "symbol": "NETGL",
+    "name": "NETGL"
   },
   {
     "symbol": "NIBAS",
