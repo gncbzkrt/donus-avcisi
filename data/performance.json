@@ -1,22 +1,22 @@
 {
-  "guncellendi": "2026-09-17T08:39:25.669052+03:00",
-  "evren_gun_sayisi": 9,
+  "guncellendi": "2026-09-18T08:35:28.548592+03:00",
+  "evren_gun_sayisi": 10,
   "ufuklar": {
     "1G": {
-      "adet": 180,
-      "basari": 38.3,
-      "ortalama": -0.8,
+      "adet": 196,
+      "basari": 39.3,
+      "ortalama": -0.85,
       "medyan": 0.0,
       "en_iyi": 10.0,
       "en_kotu": -10.0
     },
     "5G": {
-      "adet": 89,
-      "basari": 38.2,
-      "ortalama": -3.52,
-      "medyan": -3.88,
-      "en_iyi": 16.3,
-      "en_kotu": -21.83
+      "adet": 113,
+      "basari": 35.4,
+      "ortalama": -4.8,
+      "medyan": -5.45,
+      "en_iyi": 22.04,
+      "en_kotu": -28.23
     },
     "20G": {
       "adet": 0,
