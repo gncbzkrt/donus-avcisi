@@ -864,6 +864,10 @@
     "name": "DSTKF"
   },
   {
+    "symbol": "DTRND",
+    "name": "DTRND"
+  },
+  {
     "symbol": "DUNYH",
     "name": "DUNYH"
   },
@@ -3014,10 +3018,6 @@
   {
     "symbol": "ZKBVR",
     "name": "ZKBVR"
-  },
-  {
-    "symbol": "ZOREN",
-    "name": "ZOREN"
   },
   {
     "symbol": "ZRGYO",
