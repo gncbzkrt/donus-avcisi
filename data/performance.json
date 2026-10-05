@@ -1,30 +1,30 @@
 {
-  "guncellendi": "2026-10-02T14:37:09.636140+03:00",
-  "evren_gun_sayisi": 20,
+  "guncellendi": "2026-10-05T15:31:18.667545+03:00",
+  "evren_gun_sayisi": 21,
   "ufuklar": {
     "1G": {
-      "adet": 306,
-      "basari": 40.8,
-      "ortalama": -0.97,
-      "medyan": -0.43,
+      "adet": 319,
+      "basari": 41.4,
+      "ortalama": -0.9,
+      "medyan": -0.38,
       "en_iyi": 11.77,
       "en_kotu": -12.46
     },
     "5G": {
-      "adet": 274,
-      "basari": 27.7,
-      "ortalama": -8.94,
-      "medyan": -6.85,
+      "adet": 282,
+      "basari": 28.4,
+      "ortalama": -8.63,
+      "medyan": -6.5,
       "en_iyi": 24.5,
       "en_kotu": -46.81
     },
     "20G": {
-      "adet": 0,
-      "basari": null,
-      "ortalama": null,
-      "medyan": null,
-      "en_iyi": null,
-      "en_kotu": null
+      "adet": 20,
+      "basari": 20.0,
+      "ortalama": -19.19,
+      "medyan": -15.04,
+      "en_iyi": 26.21,
+      "en_kotu": -76.38
     },
     "60G": {
       "adet": 0,
@@ -37,10 +37,10 @@
   },
   "stratejiler": {
     "daily": {
-      "adet": 47,
-      "basari": 40.4,
-      "ortalama": -0.93,
-      "medyan": -1.38,
+      "adet": 50,
+      "basari": 40.0,
+      "ortalama": -0.86,
+      "medyan": -1.79,
       "en_iyi": 11.27,
       "en_kotu": -10.0
     },
@@ -53,12 +53,12 @@
       "en_kotu": null
     },
     "trend": {
-      "adet": 0,
-      "basari": null,
-      "ortalama": null,
-      "medyan": null,
-      "en_iyi": null,
-      "en_kotu": null
+      "adet": 10,
+      "basari": 10.0,
+      "ortalama": -22.74,
+      "medyan": -21.2,
+      "en_iyi": 9.12,
+      "en_kotu": -51.46
     },
     "mid_term": {
       "adet": 0,
