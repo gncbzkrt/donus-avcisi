@@ -1,28 +1,28 @@
 {
-  "guncellendi": "2026-10-14T13:31:52.637701+03:00",
-  "evren_gun_sayisi": 28,
+  "guncellendi": "2026-10-15T13:14:19.949118+03:00",
+  "evren_gun_sayisi": 29,
   "ufuklar": {
     "1G": {
-      "adet": 391,
-      "basari": 41.7,
+      "adet": 397,
+      "basari": 41.8,
       "ortalama": -0.86,
       "medyan": -0.38,
       "en_iyi": 11.77,
       "en_kotu": -12.46
     },
     "5G": {
-      "adet": 351,
-      "basari": 33.0,
+      "adet": 360,
+      "basari": 33.1,
       "ortalama": -6.68,
-      "medyan": -3.83,
+      "medyan": -3.79,
       "en_iyi": 30.26,
       "en_kotu": -46.81
     },
     "20G": {
-      "adet": 180,
-      "basari": 16.1,
-      "ortalama": -25.26,
-      "medyan": -18.8,
+      "adet": 196,
+      "basari": 16.3,
+      "ortalama": -25.33,
+      "medyan": -18.2,
       "en_iyi": 26.78,
       "en_kotu": -89.0
     },
@@ -53,10 +53,10 @@
       "en_kotu": null
     },
     "trend": {
-      "adet": 80,
-      "basari": 12.5,
-      "ortalama": -22.51,
-      "medyan": -14.74,
+      "adet": 90,
+      "basari": 14.4,
+      "ortalama": -20.09,
+      "medyan": -11.89,
       "en_iyi": 26.78,
       "en_kotu": -89.0
     },
